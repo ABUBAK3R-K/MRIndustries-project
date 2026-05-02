@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zen &amp; Harmony | Heritage Luxury</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Serif:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#755b00",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#e4e2df",
+                        "secondary-fixed-dim": "#e6c364",
+                        "on-primary-fixed-variant": "#3a4859",
+                        "on-background": "#1a1c1c",
+                        "outline-variant": "#c4c6cc",
+                        "on-tertiary-container": "#848481",
+                        "on-secondary-fixed": "#241a00",
+                        "tertiary-fixed-dim": "#c8c6c4",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#eeeeee",
+                        "primary": "#000000",
+                        "on-tertiary-fixed-variant": "#474745",
+                        "on-surface-variant": "#44474c",
+                        "on-secondary-container": "#785d00",
+                        "surface-container-low": "#f3f3f4",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-fixed": "#ffe08f",
+                        "on-surface": "#1a1c1c",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-secondary-fixed-variant": "#584400",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#d6e4f9",
+                        "on-tertiary-fixed": "#1b1c1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#0f1c2c",
+                        "on-primary-container": "#778598",
+                        "inverse-surface": "#2f3131",
+                        "secondary-container": "#fed977",
+                        "outline": "#74777d",
+                        "background": "#f9f9f9",
+                        "tertiary-container": "#1b1c1a",
+                        "inverse-primary": "#bac8dc",
+                        "surface-tint": "#525f71",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#000000",
+                        "error": "#ba1a1a",
+                        "primary-container": "#0f1c2c",
+                        "primary-fixed-dim": "#bac8dc",
+                        "surface-dim": "#dadada",
+                        "surface": "#f9f9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "grid-margin": "64px",
+                        "lg": "48px",
+                        "grid-gutter": "24px",
+                        "base": "8px",
+                        "xl": "80px",
+                        "sm": "12px",
+                        "grid-margin": "64px",
+                        "md": "24px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Inter"],
+                        "headline-md": ["Noto Serif"],
+                        "display-lg": ["Noto Serif"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Noto Serif"],
+                        "display-md": ["Noto Serif"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["22px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["28px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "display-md": ["36px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface overflow-x-hidden">
+<!-- Top Navigation Bar (Shared Component) -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-outline-variant bg-surface-container-lowest px-grid-margin py-base sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-4 text-primary group" href="home.html">
+<div class="size-6 text-primary group-hover:text-secondary transition-colors">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_543)">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_6_543"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-on-surface font-headline-md leading-tight tracking-[-0.015em]">Zen &amp; Harmony</h2>
+</a>
+<div class="flex items-center gap-9">
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors" href="home.html">Bazaar</a>
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors" href="hindu.html">Festive</a>
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors" href="muslim.html">Modest</a>
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors" href="buddhist.html">Zen</a>
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors" href="sikh.html">Heritage</a>
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors" href="christian.html">Sunday</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<label class="flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded h-full bg-surface-container border border-outline-variant">
+<div class="text-on-surface-variant flex items-center justify-center pl-4 rounded-l border-r-0" data-icon="search">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded text-on-surface focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-on-surface-variant px-4 rounded-l-none border-l-0 pl-2 text-label-lg" placeholder="Search Essentials" value=""/>
+</div>
+</label>
+<div class="flex gap-2">
+<a class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded h-10 bg-surface-container text-on-surface gap-2 font-label-lg px-2.5 hover:bg-surface-container-high transition-colors" href="bag.html">
+<div class="text-on-surface" data-icon="shopping_bag">
+<span class="material-symbols-outlined">shopping_bag</span>
+</div>
+</a>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded h-10 bg-surface-container text-on-surface gap-2 font-label-lg px-2.5 hover:bg-surface-container-high transition-colors">
+<div class="text-on-surface" data-icon="person">
+<span class="material-symbols-outlined">person</span>
+</div>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative h-[819px] w-full bg-surface flex items-center px-grid-margin overflow-hidden">
+<div class="relative z-10 max-w-2xl flex flex-col gap-md">
+<span class="text-secondary font-label-lg uppercase tracking-widest">Heritage Tranquility</span>
+<h1 class="text-display-lg text-primary leading-[1.1]">Elevate Your Spirit With Timeless Design</h1>
+<p class="text-body-lg text-on-surface-variant leading-relaxed">
+                    Discover a curated selection of sacred tools and minimalist attire designed to harmonize your outer surroundings with your inner stillness. Handcrafted by heritage artisans.
+                </p>
+<div class="flex gap-md mt-sm">
+<a class="bg-primary text-on-primary font-label-lg py-sm px-lg rounded hover:bg-on-primary-container transition-all inline-block" href="home.html">
+                        Shop Collection
+                    </a>
+<button class="border border-secondary text-secondary font-label-lg py-sm px-lg rounded hover:bg-secondary-fixed transition-all">
+                        Book a Studio Session
+                    </button>
+</div>
+</div>
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A serene, minimalist high-end meditation room with warm morning light filtering through wooden slats. The room features a low-profile authentic meditation platform, a single bonsai tree in a ceramic pot, and soft cream-colored linen drapes. The overall aesthetic is one of heritage luxury and quiet sophistication, using a palette of warm woods, cream, and deep navy accents. The mood is peaceful and profoundly tranquil." style="background-image: linear-gradient(to right, rgba(249, 249, 249, 1) 30%, rgba(249, 249, 249, 0) 70%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXDow0qKw93WJ5EwG_YqFw76DHHEu2aSXtxZ2rBi6hPLvKsOF_G-ERAS5ti4Fu4J8koF5mHx6CVIlEYwIRjlK1e12bslwsG4rZpXgnHz-jsnrBNlH5UpTCjXxHbllKK_Q_M4XhfcKF-tLlgt5ZwfD-MltprXnOjkzPuilBlV01wKMdZr3kkmdBH5yfqRfUd5Hl2XyEWyKH1aIZ9xCjuDAfp-CUYTxJaqdWswdAC7Bjw9Szg-wg44GLTLF3UGIE20mi1bxPvXp-SDYJ');"></div>
+</div>
+</section>
+<!-- Product Grid Section -->
+<section class="py-xl px-grid-margin bg-surface-container-lowest">
+<div class="flex justify-between items-end mb-lg">
+<div class="flex flex-col gap-xs">
+<h2 class="text-display-md text-primary">Sacred Essentials</h2>
+<p class="text-body-md text-on-surface-variant">Masterpieces of mindfulness and artisan craft.</p>
+</div>
+<a class="text-primary font-label-lg flex items-center gap-2 hover:gap-4 transition-all group" href="home.html">
+                    View All <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">trending_flat</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-grid-gutter">
+<!-- Product Card 1 -->
+<div class="flex flex-col gap-sm group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container relative overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A hand-hammered traditional brass singing bowl placed on a deep navy silk cushion with gold embroidery. The lighting is soft and moody, highlighting the tactile texture of the metal and the intricate weave of the fabric. The background is a minimalist cream wall with subtle shadows. The image exudes a sense of premium quality and heritage craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtriVabW4zSSZqogg41L_tfRo6UygabDoIf8BzIfsAcq0zwSNiZfU9oR18WziuWhts273G22OD_aRL4hEka6vRW48LRfqs_Ccpiv16-EedgAFJMyYJf1TLzateYiEgLRqmr1n50jQStz8y4klmGN2-BweEzvK8u6m5MLGVDVt3Nkhe7-s-zpNJgkROKl1cEMcTZlnfHIwaAjT93z-kqqSPwEfrfn2YWB7irAuvtgUDS7tzjVSTm9mDZwXaQgpocnNnTJjmsWezHT6a"/>
+<div class="absolute top-4 right-4 bg-secondary-fixed text-on-secondary-fixed-variant px-3 py-1 font-label-sm rounded-full">New Arrival</div>
+</div>
+<div class="flex flex-col">
+<h3 class="text-headline-md text-primary">Artisan Brass Singing Bowl</h3>
+<p class="text-on-surface-variant font-label-lg">Hammered by hand in Varanasi</p>
+<p class="mt-2 text-primary font-label-lg">$240.00</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="flex flex-col gap-sm group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container relative overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Two premium oversized meditation cushions stacked neatly in a sunlit corner. The top cushion is a soft sage green and the bottom is a muted clay color, both made from heavy, organic textured linen. The setting is a bright, high-key modern room with light oak flooring and a single sprig of dried eucalyptus in a stone vase nearby. The visual style is clean, modern, and high-end." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE-5kEgVjK_63t0G4ZEUwNGuaC5RzdirLF6vA5bppFjiGh6PaT4ZfbjXCe_rOBjTmX3VqyK15ixFTNunTybZYufzIFeHEl0SXi7PkHVVB6TXPJgGG6jLWuHA1YnEdSQvj9bIxmhKdBpwo8-SBSTRLt6JV65RQcschMzmMN4UCJdX9Sa7BdYHyHF1BbE41_x2cauykvBYlusLVWoohdPFqZwczSZ9NPWR2MGfaBPac0pdzSfBTbtpU1-wbxR6ShzlTLfVskVnQUBU4a"/>
+</div>
+<div class="flex flex-col">
+<h3 class="text-headline-md text-primary">Grand Meditation Cushion</h3>
+<p class="text-on-surface-variant font-label-lg">Organic linen with buckwheat hull</p>
+<p class="mt-2 text-primary font-label-lg">$185.00</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="flex flex-col gap-sm group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container relative overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A person sitting in a cross-legged position wearing elegant, minimalist high-end loungewear made from fine white cotton. The fabric is draped artistically, showing its premium weight and texture. The studio setting is minimalist with low-contrast warm lighting and a soft-focus background. The overall aesthetic is one of heritage-inspired modern luxury and effortless comfort." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClKOOMh5qInvqDfBzhjvjIPoalngp8jUFV3CkUzBihwVO12ooMklZabow2eCmKPARj77vPjfaRjZqTyBEvcu507AJPmbDBCi2lXhjw2mXVBp-pYVl_tTlWzrhHT6WOhMhVGp5GI-gDXdRP4YygOZM1-Psz4SXlq4urwvw78zAAFcPkVfYU8YSKNvxaNNiooj0ieH1AI9z6uxT9YcFt63LwRsnM43iX2rP-pQRcfMy1pyu-4qcGaIQ0JdiIiThFtQ4uwad33z_e7xRJ"/>
+</div>
+<div class="flex flex-col">
+<h3 class="text-headline-md text-primary">Heritage Linen Tunic</h3>
+<p class="text-on-surface-variant font-label-lg">Hand-spun organic cotton</p>
+<p class="mt-2 text-primary font-label-lg">$310.00</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Zen Edit Section -->
+<section class="py-xl bg-primary text-on-primary">
+<div class="px-grid-margin grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
+<div class="order-2 lg:order-1 relative h-[600px] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A collection of Zen-inspired objects arranged on a low dark-wood table. Items include a small stone sculpture, a ceramic incense burner with a thin trail of smoke, and a minimalist black-and-white art book. The lighting is focused and dramatic, highlighting the tactile surfaces against a deep charcoal background. The mood is sophisticated, curated, and profoundly calm, reflecting the Zen Edit aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBFpiRrJEEk1jO6RKMidMRjniobOJ5RUFmze3Hq5bNr8Nq7KzRweXJI0jygDA-ZpJh2s1QMszFqhRx1dJxEKIftz9mQfQ_OHcOjBBcBczszvuvyzIgIidkY6GYkqzr6bc1FOtBEFf9j7c1dAoDoTMqFgtCVn0Yma50cRITNIKijI6UJdAmGrEAgV2t2PHJPhwJ907HzyjupqCXlXFACzoLYWXbBDIUm3VZOoAMw2R-d4K-tH9wBVJIweOyV2dYR3HU7O27ptG1xyZ3"/>
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+<div class="order-1 lg:order-2 flex flex-col gap-md">
+<h2 class="text-display-md text-secondary-fixed">The Zen Edit</h2>
+<p class="text-body-lg opacity-80 leading-relaxed">
+                        Our quarterly editorial exploration into the intersection of ancient philosophy and modern living. Volume IV: "The Architecture of Silence."
+                    </p>
+<div class="space-y-4">
+<div class="border-b border-white/20 pb-4 flex justify-between items-center group cursor-pointer">
+<span class="text-headline-md">Scent &amp; Soul: Sacred Aromas</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+<div class="border-b border-white/20 pb-4 flex justify-between items-center group cursor-pointer">
+<span class="text-headline-md">The Geometry of a Sacred Space</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+<div class="border-b border-white/20 pb-4 flex justify-between items-center group cursor-pointer">
+<span class="text-headline-md">Mindful Attire for Modern Rites</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+<button class="mt-md font-label-lg uppercase tracking-widest text-secondary-fixed hover:text-white transition-colors flex items-center gap-2">
+                        Read the Journal <span class="material-symbols-outlined">menu_book</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Mindful Space Studio (AI Section) -->
+<section class="py-xl px-grid-margin bg-background">
+<div class="text-center max-w-3xl mx-auto mb-lg">
+<h2 class="text-display-md text-primary mb-sm">Mindful Space Studio</h2>
+<p class="text-body-lg text-on-surface-variant">Our AI-driven visualization tool helps you design a sanctuary that resonates with your unique energy. Transform any room into a center of harmony.</p>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col lg:flex-row gap-lg items-center">
+<div class="w-full lg:w-1/2 aspect-video bg-surface rounded-lg relative group cursor-crosshair overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" data-alt="A split-screen comparison of a room. The left side shows a plain, empty modern apartment corner. The right side is an AI-generated transformation of that same corner into a lush, serene Zen retreat with bamboo flooring, an integrated floor-level tea table, silk floor pillows, and soft accent lighting. The image highlights the capability of the AI visualization tool to create high-end, harmonious heritage designs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz4b8cJFiG4l3WD35nsvwRcBSoZ1JYOmDO6wNho47HtPD-_7NOh4P2aSRAaEjai9kU_a5jc2SjRuw36KMBrtq4eDf7XqQziZ22Qzq4_wj1PcUQePZQBqVXHJYdAku1geGgE-2GWmqF-4EJMO92FDttzt4leyR-qXDAZYdO_OKXiM9HGY9ubMTGI3ozEVnZCJ6aAGIS4_uJ0TLm_W5t__OxehWqTJTBfuruoBlY2EFb6zgmpHo122B_X1LM2GppTctlEOrN04N_qDzH"/>
+<div class="absolute inset-0 flex items-center justify-center bg-primary/10 group-hover:bg-transparent transition-colors">
+<div class="bg-surface-container-lowest/90 backdrop-blur-sm px-6 py-4 rounded shadow-lg flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary animate-pulse">auto_awesome</span>
+<span class="font-label-lg">Tap to Visualize Your Space</span>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 flex flex-col gap-md">
+<div class="space-y-sm">
+<label class="font-label-lg text-primary block">Select Your Intention</label>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 rounded border border-secondary text-secondary font-label-sm cursor-pointer hover:bg-secondary-fixed transition-colors">Inner Peace</span>
+<span class="px-4 py-2 rounded border border-outline-variant text-on-surface-variant font-label-sm cursor-pointer hover:border-secondary transition-colors">Vibrant Energy</span>
+<span class="px-4 py-2 rounded border border-outline-variant text-on-surface-variant font-label-sm cursor-pointer hover:border-secondary transition-colors">Deep Focus</span>
+<span class="px-4 py-2 rounded border border-outline-variant text-on-surface-variant font-label-sm cursor-pointer hover:border-secondary transition-colors">Shared Connection</span>
+</div>
+</div>
+<div class="space-y-sm">
+<label class="font-label-lg text-primary block">Upload Room Layout</label>
+<div class="border border-dashed border-outline-variant rounded p-lg text-center hover:border-secondary transition-colors cursor-pointer bg-surface-container-low">
+<span class="material-symbols-outlined text-outline-variant text-4xl mb-2">add_a_photo</span>
+<p class="text-label-lg text-on-surface-variant">Drop photo or click to browse</p>
+</div>
+</div>
+<button class="w-full py-md bg-primary text-on-primary font-label-lg rounded hover:bg-on-primary-container transition-all">
+                        Generate Visualization
+                    </button>
+<p class="text-label-sm text-on-surface-variant text-center">AI-driven architectural insights based on Vastu and Zen principles.</p>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-xl px-grid-margin border-t border-outline-variant bg-surface-container-low">
+<div class="max-w-xl mx-auto text-center flex flex-col gap-md">
+<h3 class="text-headline-lg">Join the Circle</h3>
+<p class="text-body-md text-on-surface-variant">Receive invitations to private studio sessions, early access to handcrafted heritage drops, and weekly mindfulness guides.</p>
+<div class="flex gap-2">
+<input class="flex-grow bg-surface border-0 border-b border-primary focus:ring-0 px-4 py-2 text-label-lg" placeholder="Your Email" type="email"/>
+<button class="bg-primary text-on-primary px-lg py-2 font-label-lg rounded-sm">Subscribe</button>
+</div>
+</div>
+</section>
+</main>
+<!-- RECOMMENDED FOR YOU -->
+<section class="px-16 pb-xl max-w-[1600px] mx-auto" id="recommended-section" style="display: none;">
+    <div class="mb-12 border-t border-outline-variant pt-12 flex justify-between items-end">
+        <div>
+            <h3 class="serif-heading text-3xl text-on-surface">Curated For You</h3>
+            <p class="font-body-md text-on-surface/60 mt-2">AI-driven recommendations based on your community and preferences.</p>
+        </div>
+    </div>
+    <div id="recommendations-grid" class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Products will be injected here -->
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-primary text-on-primary py-lg px-grid-margin border-t border-white/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg">
+<div class="col-span-1 md:col-span-1">
+<h2 class="font-headline-md mb-md text-secondary-fixed">Zen &amp; Harmony</h2>
+<p class="text-label-sm opacity-60 leading-relaxed">Honoring tradition through modern luxury. Curated heritage essentials for the high-end mindful community.</p>
+</div>
+<div>
+<h4 class="font-label-lg mb-md">The Collection</h4>
+<ul class="text-label-sm space-y-2 opacity-70">
+<li><a class="hover:text-secondary-fixed transition-colors" href="home.html">Bazaar Collection</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="hindu.html">Festive Wear</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="muslim.html">Modest Elegance</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="sikh.html">Heritage Legacy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg mb-md">Studio</h4>
+<ul class="text-label-sm space-y-2 opacity-70">
+<li><a class="hover:text-secondary-fixed transition-colors" href="home.html">AI Visualization</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="home.html">Private Consultation</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="home.html">Studio Locator</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="home.html">Workshops</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg mb-md">Connect</h4>
+<div class="flex gap-4 mb-md">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">mail</span>
+</div>
+<p class="text-label-sm opacity-60">© 2024 Zen &amp; Harmony. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+    // Determine community from URL (for recommender later)
+    const path = window.location.pathname.toLowerCase();
+    let currentCommunity = "Hindu";
+    if (path.includes("muslim")) currentCommunity = "Muslim";
+    if (path.includes("sikh")) currentCommunity = "Sikh";
+    if (path.includes("buddhist")) currentCommunity = "Buddhist";
+    if (path.includes("christian")) currentCommunity = "Christian";
+
+    // --- TRY-ON LOGIC ---
+    // 1. Create hidden file inputs
+    const userImgInput = document.createElement('input');
+    userImgInput.type = 'file';
+    userImgInput.accept = 'image/*';
+    
+    const garmentImgInput = document.createElement('input');
+    garmentImgInput.type = 'file';
+    garmentImgInput.accept = 'image/*';
+
+    // 2. Identify UI elements precisely using the labels
+    const labels = Array.from(document.querySelectorAll('label'));
+    const profileLabel = labels.find(l => l.innerText.toLowerCase().includes('your profile') || l.innerText.toLowerCase().includes('1.'));
+    const garmentLabel = labels.find(l => l.innerText.toLowerCase().includes('garment') || l.innerText.toLowerCase().includes('2.'));
+    
+    let userZone = profileLabel ? profileLabel.nextElementSibling : null;
+    let garmentZone = garmentLabel ? garmentLabel.nextElementSibling : null;
+    
+    const generateBtn = Array.from(document.querySelectorAll('button')).find(b => b.innerText && b.innerText.toUpperCase().includes('GENERATE AI FITTING'));
+    
+    // Result area is the big display section on the right
+    const resultArea = Array.from(document.querySelectorAll('div')).find(d => d.innerText && d.innerText.includes('Awaiting Magic'));
+    const containerToUpdate = resultArea ? resultArea.parentElement : null;
+    
+    const heightInput = document.querySelector('input[type="number"]') || document.querySelector('input[value="170"]');
+
+    // Save initial state for reset
+    const initialUserZoneHTML = userZone ? userZone.innerHTML : '';
+    const initialGarmentZoneHTML = garmentZone ? garmentZone.innerHTML : '';
+    const initialResultHTML = containerToUpdate ? containerToUpdate.innerHTML : '';
+
+    if (!userZone || !garmentZone || !generateBtn || !containerToUpdate) {
+        console.error('Could not find upload zones or generate button!', {userZone, garmentZone, generateBtn, containerToUpdate});
+    }
+
+    const previewImg = (file, zone) => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            let img = zone.querySelector('img');
+            if (img) {
+                img.src = e.target.result;
+            } else {
+                zone.innerHTML = `<img src="${e.target.result}" class="w-full h-full object-contain rounded-lg" style="max-height: 150px; object-fit: contain;" />`;
+            }
+        };
+        reader.readAsDataURL(file);
+    };
+
+    // 3. Attach Events
+    if (userZone) {
+        userZone.style.cursor = 'pointer';
+        userZone.addEventListener('click', (e) => { e.stopPropagation(); userImgInput.click(); });
+    }
+    if (garmentZone) {
+        garmentZone.style.cursor = 'pointer';
+        garmentZone.addEventListener('click', (e) => { e.stopPropagation(); garmentImgInput.click(); });
+    }
+
+    userImgInput.onchange = () => userImgInput.files[0] && previewImg(userImgInput.files[0], userZone);
+    garmentImgInput.onchange = () => garmentImgInput.files[0] && previewImg(garmentImgInput.files[0], garmentZone);
+
+    // Provide a global reset function
+    window.resetTryOn = () => {
+        userImgInput.value = '';
+        garmentImgInput.value = '';
+        if (userZone) userZone.innerHTML = initialUserZoneHTML;
+        if (garmentZone) garmentZone.innerHTML = initialGarmentZoneHTML;
+        if (containerToUpdate) containerToUpdate.innerHTML = initialResultHTML;
+    };
+
+    generateBtn?.addEventListener('click', async () => {
+        if (!userImgInput.files[0] || !garmentImgInput.files[0]) {
+            alert('Please upload both your photo and a garment photo first!');
+            return;
+        }
+
+        const originalText = generateBtn.innerText;
+        generateBtn.innerText = 'GENERATING...';
+        generateBtn.disabled = true;
+        generateBtn.style.opacity = '0.7';
+
+        const tryonData = new FormData();
+        tryonData.append('person_image', userImgInput.files[0]);
+        tryonData.append('garment_image', garmentImgInput.files[0]);
+        
+        const measData = new FormData();
+        measData.append('person_image', userImgInput.files[0]);
+        measData.append('user_height', heightInput?.value || 170);
+
+        try {
+            const [tryonRes, measRes] = await Promise.all([
+                fetch('http://localhost:8000/tryon', { method: 'POST', body: tryonData }),
+                fetch('http://localhost:8000/measurements', { method: 'POST', body: measData })
+            ]);
+
+            if (tryonRes.ok) {
+                const blob = await tryonRes.blob();
+                const url = URL.createObjectURL(blob);
+                
+                let measurementsHtml = '';
+                if (measRes.ok) {
+                    const meas = await measRes.json();
+                    measurementsHtml = `
+                        <div class="mt-6 bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded-lg p-4 w-full max-w-sm">
+                            <h5 class="text-[#C9A84C] font-bold text-center mb-3 uppercase tracking-widest text-xs">AI Measurements</h5>
+                            <div class="grid grid-cols-2 gap-y-2 text-xs text-on-surface">
+                                <div class="text-on-surface/60">Shoulder:</div>
+                                <div class="font-semibold text-right">${meas.shoulder_width || 'N/A'}</div>
+                                <div class="text-on-surface/60">Chest/Torso:</div>
+                                <div class="font-semibold text-right">${meas.torso_length || 'N/A'}</div>
+                                <div class="text-on-surface/60">Hips:</div>
+                                <div class="font-semibold text-right">${meas.hip_width || 'N/A'}</div>
+                            </div>
+                            <div class="mt-3 pt-3 border-t border-[#C9A84C]/20 flex justify-between items-center">
+                                <span class="text-on-surface/60 text-xs">Recommended Size:</span>
+                                <span class="bg-[#C9A84C] text-white font-bold px-3 py-1 rounded text-sm">${meas.recommended_size || 'M'}</span>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                if (containerToUpdate) {
+                    containerToUpdate.innerHTML = `
+                        <div class="relative w-full h-full flex flex-col items-center justify-center p-4 overflow-y-auto">
+                            <img src="${url}" class="max-w-full max-h-[450px] object-contain rounded-xl shadow-2xl border-4 border-[#C9A84C]/30" />
+                            <p class="mt-4 text-[#C9A84C] font-bold tracking-widest uppercase text-sm">AI Fitting Ready</p>
+                            ${measurementsHtml}
+                            <button onclick="window.resetTryOn()" class="mt-6 border border-secondary text-secondary px-8 py-3 uppercase tracking-[0.2em] font-label-sm hover:bg-secondary hover:text-on-secondary transition-all flex items-center gap-2">
+                                <span class="material-symbols-outlined text-sm">refresh</span> Try Another Outfit
+                            </button>
+                        </div>
+                    `;
+                }
+            } else {
+                alert('AI Fitting failed. Make sure your backend is running!');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Error connecting to backend at http://localhost:8000');
+        } finally {
+            if(generateBtn) {
+                generateBtn.innerText = originalText;
+                generateBtn.disabled = false;
+                generateBtn.style.opacity = '1';
+            }
+        }
+    });
+
+    // --- RECOMMENDER LOGIC ---
+    try {
+        const response = await fetch('http://localhost:8000/recommend', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                community: currentCommunity,
+                preferred_categories: [],
+                price_range: [0, 1000],
+                past_purchases: [],
+                tags: []
+            })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            const recs = data.recommendations || [];
+            
+            if (recs.length > 0) {
+                const recSection = document.getElementById('recommended-section');
+                if(recSection) recSection.style.display = 'block';
+                const grid = document.getElementById('recommendations-grid');
+                if(grid) {
+                    grid.innerHTML = '';
+                    recs.slice(0, 4).forEach(item => {
+                        grid.innerHTML += `
+                            <div class="group cursor-pointer">
+                                <div class="relative bg-surface-container-low aspect-[3/4] mb-4 overflow-hidden border border-outline-variant/30 flex items-center justify-center p-8">
+                                    <span class="material-symbols-outlined text-6xl text-secondary/20" style="font-variation-settings: 'wght' 200;">apparel</span>
+                                    <div class="absolute inset-0 bg-primary-container/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                                        <button class="border border-secondary text-secondary px-6 py-2 uppercase tracking-[0.2em] font-label-sm hover:bg-secondary hover:text-on-secondary transition-all">
+                                            View Details
+                                        </button>
+                                    </div>
+                                    <div class="absolute top-4 right-4 bg-surface-container-highest/80 backdrop-blur-md px-2 py-1 flex items-center gap-1 border border-outline-variant/50">
+                                        <span class="material-symbols-outlined text-[10px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="text-[10px] font-bold">${item.rating}</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-start gap-4">
+                                    <div>
+                                        <h4 class="font-label-lg uppercase tracking-wider text-on-surface mb-1">${item.name}</h4>
+                                        <p class="font-body-md text-xs text-on-surface/40 uppercase tracking-widest">${item.category}</p>
+                                    </div>
+                                    <span class="font-label-lg text-secondary">$${item.price.toFixed(2)}</span>
+                                </div>
+                                <div class="mt-3 text-[10px] text-secondary/80 bg-secondary/5 inline-block px-2 py-1 rounded border border-secondary/10">
+                                    <span class="material-symbols-outlined text-[10px] align-middle mr-1">auto_awesome</span>
+                                    ${item.explanation.split('|')[0]}
+                                </div>
+                            </div>
+                        `;
+                    });
+                }
+            }
+        }
+    } catch (err) {
+        console.error("Failed to load recommendations:", err);
+    }
+});
+</script>
+</body></html>
+
+
+
+
+
+
+

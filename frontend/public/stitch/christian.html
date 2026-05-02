@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Serif:wght@400;500;600;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "primary-fixed": "#d6e4f9",
+                        "on-primary-fixed-variant": "#3a4859",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e2e2e2",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-container": "#1b1c1a",
+                        "on-tertiary-container": "#848481",
+                        "primary-container": "#0f1c2c",
+                        "surface-container-low": "#f3f3f4",
+                        "primary": "#000000",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#0f1c2c",
+                        "primary-fixed-dim": "#bac8dc",
+                        "surface-dim": "#dadada",
+                        "on-surface": "#1a1c1c",
+                        "on-background": "#1a1c1c",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#1b1c1a",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary": "#000000",
+                        "surface-container": "#eeeeee",
+                        "secondary": "#755b00",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#474745",
+                        "surface-container-highest": "#e2e2e2",
+                        "tertiary-fixed-dim": "#c8c6c4",
+                        "surface": "#f9f9f9",
+                        "secondary-fixed-dim": "#e6c364",
+                        "on-secondary-fixed-variant": "#584400",
+                        "outline": "#74777d",
+                        "secondary-fixed": "#ffe08f",
+                        "background": "#f9f9f9",
+                        "outline-variant": "#c4c6cc",
+                        "inverse-on-surface": "#f0f1f1",
+                        "secondary-container": "#fed977",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-tint": "#525f71",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#bac8dc",
+                        "on-primary-container": "#778598",
+                        "on-surface-variant": "#44474c",
+                        "tertiary-fixed": "#e4e2df",
+                        "on-secondary-container": "#785d00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "base": "8px",
+                        "xl": "80px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "grid-margin": "64px",
+                        "md": "24px",
+                        "grid-gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "label-sm": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "display-md": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                        "headline-lg": ["28px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-md": ["36px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["22px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scrolling-hide::-webkit-scrollbar { display: none; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-outline-variant bg-surface-container-lowest px-grid-margin py-3 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-4 text-primary group" href="home.html">
+<div class="size-6 text-primary group-hover:text-secondary transition-colors">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_330)">
+<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs><clippath id="clip0_6_330"><rect fill="white" height="48" width="48"></rect></clippath></defs>
+</svg>
+</div>
+<h2 class="text-primary font-serif text-[20px] leading-tight tracking-tight uppercase font-black">Aura<span class="text-secondary">Fit</span></h2>
+</a>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-on-surface-variant font-label-caps uppercase hover:text-secondary transition-colors" href="home.html">Bazaar</a>
+<a class="text-on-surface-variant font-label-caps uppercase hover:text-secondary transition-colors" href="hindu.html">Festive</a>
+<a class="text-on-surface-variant font-label-caps uppercase hover:text-secondary transition-colors" href="muslim.html">Modest</a>
+<a class="text-on-surface-variant font-label-caps uppercase hover:text-secondary transition-colors" href="buddhist.html">Zen</a>
+<a class="text-on-surface-variant font-label-caps uppercase hover:text-secondary transition-colors" href="sikh.html">Heritage</a>
+<a class="text-primary font-label-caps uppercase border-b-2 border-secondary pb-0.5" href="christian.html">Sunday</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-md">
+<label class="hidden lg:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded h-full">
+<div class="text-on-surface-variant flex border-none bg-surface-container-high items-center justify-center pl-4 rounded-l" data-icon="search">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-surface-container-high focus:ring-0 text-body-md px-4 rounded-r" placeholder="Search heritage pieces..."/>
+</div>
+</label>
+<div class="flex gap-2">
+<a class="flex items-center justify-center rounded h-10 bg-surface-container-high text-on-surface w-10 hover:bg-secondary-container transition-colors" href="bag.html">
+<span class="material-symbols-outlined">shopping_bag</span>
+</a>
+<button class="flex items-center justify-center rounded h-10 bg-surface-container-high text-on-surface w-10 hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto">
+<!-- Hero Section -->
+<section class="relative h-[819px] w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-black/30 z-10"></div>
+<img alt="Sunday Grace Heritage Collection" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRrDTc1evA2z03HuZfWrcStAzBEuqqqjuo7hcWmLg4Ic8RBX3K9Dzz7a_y-PwVTzDM1ylL3fNRVYgkdf-YCDirzPd2jbrL4CJharLzt8wa9Xip7TTjNKW_Agqd37Rzup-96jYrXQnjI7XuIwicXSCA9x3hcnkOwCJE0MVwCYJh-sjus4a7QdMe7QYF5X4mnEoFELfNcd-46Xr8_YsPaCG6CP9vYcHBuP52qCmP3CUyL7BVleEYeF1ti_z7rGEnCrXg506PSqhFUoHm"/>
+</div>
+<div class="relative z-20 text-center px-grid-margin max-w-3xl">
+<span class="text-white font-label-caps uppercase tracking-[0.3em] mb-4 block">The Eternal Collection</span>
+<h1 class="text-white font-serif text-5xl md:text-7xl mb-6">Reverence in Every Thread</h1>
+<p class="text-white/90 font-body-lg mb-8 max-w-xl mx-auto">Discover a curated selection of attire crafted for sacred moments and faithful celebrations.</p>
+<div class="flex gap-4 justify-center">
+<button class="bg-primary text-on-primary px-lg py-4 font-label-caps uppercase tracking-widest hover:bg-secondary transition-colors">Shop Women</button>
+<button class="bg-white text-primary px-lg py-4 font-label-caps uppercase tracking-widest hover:bg-surface-container transition-colors">Shop Men</button>
+</div>
+</div>
+</section>
+<!-- The Grace Edit Section -->
+<section class="py-xl px-grid-margin bg-surface-container-lowest">
+<div class="flex flex-col items-center text-center mb-lg">
+<h2 class="font-serif text-[32px] font-semibold text-primary mb-4">The Grace Edit</h2>
+<div class="w-12 h-[1px] bg-secondary mb-4"></div>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">A masterful curation of high-quality fabrics and timeless silhouettes, designed to honor tradition through modern sophistication.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter">
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden mb-md border border-outline-variant">
+<img alt="Fine Linen" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzFs0EuSSl4E-HSJ-dH9RlrP3V8E5h6pgq6wvdvLNH8r9A_BrG-zI4_9e4Xq0Z2xkCD98Us3flay7yTbuARGT8fdIUhRkr09OHHvLimYES2QSyQUtrMlu6gTXiw4hh7_efVRwX2hebuRBP6c5Eh7kW1rQLPwd2O-Y_4Dh9GZGTtVISPgQCtjtO9LB8BZgY87ayVuf85MldwPcc0SVS24WOCEBuSMSH4uYBzf3BuBNGLeZulcgm0G-IRUIH7Jo6EY6w8NLKSU8nB41x"/>
+</div>
+<h3 class="font-serif text-[22px] font-medium text-primary mb-1">Purest Linen</h3>
+<p class="text-on-surface-variant text-sm font-label-caps uppercase tracking-widest">Hand-loomed heritage</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden mb-md border border-outline-variant">
+<img alt="Fine Silk" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJXCVEcP3NTMcaboP8c_R3ejXUG2S2UkyTNOPjt_fwHNRBs4k-pmH0Y7b5KxrawRNcPAYgvX8T9qr4OwnmMb1VvioF9dJBCTBdNc5Ct325M4dqWerosz6YwDQGYN7UAsX_9ni4amihvBi4cYPgeOQNCG0VHLLmg-Yhes-vN67NmwNYuIordgRvJC5IbzFIFaXOWXTwIyyVa53TXz-4DgKAhYtRMNZvZLSSajWm2SXqntICV1KXZ9SD3PjRajGt9sN7XgCWFGa7-Rnd"/>
+</div>
+<h3 class="font-serif text-[22px] font-medium text-primary mb-1">Celestial Silk</h3>
+<p class="text-on-surface-variant text-sm font-label-caps uppercase tracking-widest">Woven by starlight</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden mb-md border border-outline-variant">
+<img alt="Intricate Lace" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5ykacrQG94DoflPSPm5lJ4jes3uAz61Bdg7rPQlowMso__VJxjy4ewvW8piqQgxd9RJqRoVuenTydzqT6yserk2GSA5e0uwoxI-85rrSkJNDMfXLURz1LWcKGsMxY_lB4pIETs4NjXuY4VIaAg9O4ziMjCDSt0tb2uXmXp5BWqmh4hX_OT20-k-Lk0HTy1D7dFssyXojzg7Q8hcMrg_Lq-SEhdNZ3aWWE9GAq4mff68mGxgMwirU3o6ZZbceyAJLiDnjEfhz2CWne"/>
+</div>
+<h3 class="font-serif text-[22px] font-medium text-primary mb-1">Divine Lace</h3>
+<p class="text-on-surface-variant text-sm font-label-caps uppercase tracking-widest">Intricate devotion</p>
+</div>
+</div>
+</section>
+<!-- Sunday Best Studio (AI Virtual Fitting) -->
+<section class="py-xl px-grid-margin bg-primary-container text-on-primary">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="space-y-md">
+<span class="text-secondary font-label-caps uppercase tracking-[0.2em]">Innovation Meets Tradition</span>
+<h2 class="font-serif text-4xl md:text-5xl font-semibold">Sunday Best Studio</h2>
+<p class="font-body-lg text-on-primary-container leading-relaxed">Experience our AI-driven virtual fitting room. Upload a photo and see how our heritage collection drapes on your silhouette with unparalleled precision.</p>
+<div class="flex flex-col gap-sm">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-label-caps uppercase text-xs tracking-widest">3D Fabric Simulation</span>
+</div>
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-label-caps uppercase text-xs tracking-widest">True-to-Scale Fit Analysis</span>
+</div>
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-label-caps uppercase text-xs tracking-widest">AI Stylist Recommendations</span>
+</div>
+</div>
+<button class="bg-secondary text-on-secondary px-lg py-4 font-label-caps uppercase tracking-widest hover:brightness-110 transition-all mt-base">Launch Studio</button>
+</div>
+<div class="relative group">
+<div class="aspect-square bg-surface-container-high/10 rounded-full flex items-center justify-center p-base border border-secondary/20">
+<img alt="AI Studio Interface" class="w-full h-full object-cover rounded-full border-4 border-primary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClVhGSp59qfUW2ZCYoggvm2UgsEV4Hb494HWSvIjWFgysqR6Lh4Mei-adKDqy-3j9syskUram948URNVtnh667WFXBuMxTVAPLevtwI1s-GJpnHSct2fzrmSbNG4rmv4_el3xbT9lg7Yy1wa5gLLcpn_QSJIDUVRig7C4OydhiZfA7cLkVcDpysA-obNNan4BGXG-tV2l8wH-Wlzr0RodQW5n8jwEp8-A3BTSrJsNjRU9bYS68rbyXW3eGez62BkiU8z12eICVhJ3i"/>
+<div class="absolute -bottom-4 -right-4 bg-white p-6 shadow-xl border border-outline-variant text-primary flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">verified</span>
+<div>
+<p class="text-xs font-label-caps uppercase tracking-widest opacity-60">Accuracy Status</p>
+<p class="text-lg font-bold">99.8% Fit Precision</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Grid: Sunday Best -->
+<section class="py-xl px-grid-margin bg-background">
+<div class="flex justify-between items-end mb-lg border-b border-outline-variant pb-md">
+<div>
+<h2 class="font-serif text-[32px] font-semibold text-primary mb-2">Heritage Collection</h2>
+<p class="font-body-md text-on-surface-variant">Selected attire for worship and celebration.</p>
+</div>
+<div class="flex gap-4 mb-2">
+<button class="font-label-caps uppercase text-xs tracking-widest text-primary border-b-2 border-secondary pb-1">All</button>
+<button class="font-label-caps uppercase text-xs tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-1">Dresses</button>
+<button class="font-label-caps uppercase text-xs tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-1">Suits</button>
+<button class="font-label-caps uppercase text-xs tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-1">Accessories</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-grid-gutter">
+<!-- Product 1 -->
+<div class="group">
+<div class="relative aspect-[3/4] bg-surface-container overflow-hidden mb-md">
+<img alt="Grace Lace Dress" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSE015JGJWWc1AjSLK82TgY2QUBrYAhEHGmfx4NxF2LJKjixTqv2X9fGw3e7x25ucuyE1sWPhaewJYSYABYvu7gLZIiSTIB607xl_x2B20obYvzl7OYLvMoUmnHkARy0GEjxH-V2Mj2LhSR21iDxUuTFZxw7y8hUHwIi4ObRByBPKB9cKi28SF4r0AKjZEveQj2feFn9dBLJGKQ_g_t_jyL-i_-SqdVvO3uYTVEL9zpc7orNYYuejuH6FCOXz9OnHEH2VYHeYq3ELU"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary text-on-secondary px-3 py-1 text-[10px] font-label-caps uppercase tracking-widest">New Arrival</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-serif text-lg font-medium text-primary">Grace Lace Tea Dress</h3>
+<p class="text-sm text-on-surface-variant">Ivory / Hand-finished Lace</p>
+</div>
+<p class="font-label-caps text-primary">$425</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group">
+<div class="relative aspect-[3/4] bg-surface-container overflow-hidden mb-md">
+<img alt="Sacred Linen Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGSRO5Kk1EGOG3V5ZNQHR-fwMpTpWXep5y3tpTgoQN1pUSnnJLoPBw4fYp36wodd-BS-WKLy3qz6npbjX9g9tbjXNfFJb1C8wd4cQTIv60sIVWYmQ7Qiov2ag6gbvmqwM4ubrt3G-CvyEJm0VJ0lRrIZtmxDVK2ZuEJywGKk_7SYpJEF9f4VmToBa5W-4zP30dWNsenXN_cD4Q0bXXnNKsv_YHv56OC6mFp6iUril9FxQfj0DQ1evh77UyxWWdtHzu0UljhtqtXvcg"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-serif text-lg font-medium text-primary">Vestige Three-Piece Suit</h3>
+<p class="text-sm text-on-surface-variant">Charcoal / Super 120s Wool</p>
+</div>
+<p class="font-label-caps text-primary">$890</p>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group">
+<div class="relative aspect-[3/4] bg-surface-container overflow-hidden mb-md">
+<img alt="Noon Prayer Maxi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxgIewijB8uaaQmXx3pTquJsUksQvrAfw0aKfgsnljD9c3-XvBFm0baXSkmR66OHZcvhIUsLAUPdmmmKiOm-jLTTwvyZmO-S1z0bDnFsLj6jrmsCNE3V1RfymINXPcXxxTdhq0-_t8C071hRgZC2ECsOMCwPHlueBVXMeAvg5Zu3Q0J1SwcJYTtXaDnti6gD-CvBLm1crTdgpOKJ1gjJ0lWa4PkRDeIIqRFZ4uzu5vUnYRh1EvXJVUF-3ed5R0TMWzSbvH_FdgB6_l"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-serif text-lg font-medium text-primary">Noon Prayer Maxi Dress</h3>
+<p class="text-sm text-on-surface-variant">Midnight / Silk Blend</p>
+</div>
+<p class="font-label-caps text-primary">$350</p>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group">
+<div class="relative aspect-[3/4] bg-surface-container overflow-hidden mb-md">
+<img alt="Heritage Essentials Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaSKh7KafVLac8TbeH1lXPySgyL-yA_0piK6ykQQA7WJMpCQrCGgYu-2qJjs51ahWg5zhmFTL0GhjMRWNmjgUdeiK21ETXvAnBbTeGLaLGhbQ1PjlDuh30yfXaBdwvdHcFxCHba2pjccinLeknR_KK2rQeL7sNY_ONGcfMv-KLkx7aNrsidTJ4K50ryFK_SoaIV7Iswrn_C0uuE8SZS7_2p8GqsocUG398-y-tCe1iIO-W0RaEmiFAx0wHPb-11If7aZsVGWwWHhoc"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-serif text-lg font-medium text-primary">Saint's Accessory Kit</h3>
+<p class="text-sm text-on-surface-variant">Black / Italian Leather</p>
+</div>
+<p class="font-label-caps text-primary">$210</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Aesthetic Divider -->
+<div class="flex items-center justify-center py-xl bg-surface-container-lowest">
+<div class="h-[0.5px] bg-secondary flex-1 mx-grid-margin"></div>
+<span class="material-symbols-outlined text-secondary mx-4" style="font-variation-settings: 'FILL' 1;">church</span>
+<div class="h-[0.5px] bg-secondary flex-1 mx-grid-margin"></div>
+</div>
+<!-- Community Section -->
+<section class="py-xl px-grid-margin bg-surface-container-lowest">
+<div class="max-w-4xl mx-auto text-center">
+<span class="text-on-surface-variant font-label-caps uppercase tracking-[0.2em] mb-4 block">Shared Stories</span>
+<h2 class="font-serif text-[32px] font-semibold text-primary mb-lg">A Community of Grace</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl text-left">
+<blockquote class="border-l-2 border-secondary pl-lg italic">
+<p class="font-body-lg text-on-surface mb-4">"Sunday Grace has transformed how I prepare for worship. The quality of the garments mirrors the reverence I feel in my heart."</p>
+<cite class="font-label-caps uppercase text-xs tracking-widest text-on-surface-variant not-italic">— Sarah J., Savannah</cite>
+</blockquote>
+<blockquote class="border-l-2 border-secondary pl-lg italic">
+<p class="font-body-lg text-on-surface mb-4">"The AI Studio helped me find the perfect fit for my son's confirmation. It's rare to see technology serve tradition so beautifully."</p>
+<cite class="font-label-caps uppercase text-xs tracking-widest text-on-surface-variant not-italic">— Thomas L., London</cite>
+</blockquote>
+</div>
+</div>
+</section>
+</main>
+<!-- RECOMMENDED FOR YOU -->
+<section class="px-16 pb-xl max-w-[1600px] mx-auto" id="recommended-section" style="display: none;">
+    <div class="mb-12 border-t border-outline-variant pt-12 flex justify-between items-end">
+        <div>
+            <h3 class="serif-heading text-3xl text-on-surface">Curated For You</h3>
+            <p class="font-body-md text-on-surface/60 mt-2">AI-driven recommendations based on your community and preferences.</p>
+        </div>
+    </div>
+    <div id="recommendations-grid" class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Products will be injected here -->
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-primary text-on-primary py-xl px-grid-margin border-t border-white/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-xl mb-xl">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-4 mb-lg">
+<svg class="size-8" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="white" fill-rule="evenodd"></path>
+</svg>
+<h2 class="font-serif text-2xl font-bold uppercase tracking-widest">Aura<span class="text-secondary">Fit</span></h2>
+</div>
+<p class="font-body-md text-on-primary-container max-w-sm mb-lg">Reverent attire for the faithful heart. Join our community for exclusive early access to heritage collections and virtual styling sessions.</p>
+<div class="flex gap-md">
+<a class="hover:text-secondary transition-colors" href="home.html"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="hover:text-secondary transition-colors" href="home.html"><span class="material-symbols-outlined">camera</span></a>
+<a class="hover:text-secondary transition-colors" href="home.html"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps uppercase tracking-widest text-xs mb-lg text-secondary">Shop</h4>
+<ul class="space-y-sm text-on-primary-container font-body-md">
+<li><a class="hover:text-white transition-colors" href="home.html">Women's Collection</a></li>
+<li><a class="hover:text-white transition-colors" href="home.html">Men's Collection</a></li>
+<li><a class="hover:text-white transition-colors" href="christian.html">Children's Sunday Best</a></li>
+<li><a class="hover:text-white transition-colors" href="home.html">Accessories</a></li>
+<li><a class="hover:text-white transition-colors" href="home.html">Gift Cards</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps uppercase tracking-widest text-xs mb-lg text-secondary">Support</h4>
+<ul class="space-y-sm text-on-primary-container font-body-md">
+<li><a class="hover:text-white transition-colors" href="home.html">AI Fitting Guide</a></li>
+<li><a class="hover:text-white transition-colors" href="home.html">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-white transition-colors" href="home.html">Care Instructions</a></li>
+<li><a class="hover:text-white transition-colors" href="home.html">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors" href="home.html">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-lg border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="text-xs text-on-primary-container font-label-caps uppercase tracking-widest">© 2024 AuraFit - The Global Bazaar. All Rights Reserved.</p>
+<div class="flex items-center gap-xs">
+<span class="text-xs text-on-primary-container font-label-caps uppercase tracking-widest">Powered by</span>
+<span class="text-secondary font-bold tracking-tighter uppercase">AURAFIT</span>
+</div>
+</div>
+</footer>
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+    // Determine community from URL (for recommender later)
+    const path = window.location.pathname.toLowerCase();
+    let currentCommunity = "Hindu";
+    if (path.includes("muslim")) currentCommunity = "Muslim";
+    if (path.includes("sikh")) currentCommunity = "Sikh";
+    if (path.includes("buddhist")) currentCommunity = "Buddhist";
+    if (path.includes("christian")) currentCommunity = "Christian";
+
+    // --- TRY-ON LOGIC ---
+    // 1. Create hidden file inputs
+    const userImgInput = document.createElement('input');
+    userImgInput.type = 'file';
+    userImgInput.accept = 'image/*';
+    
+    const garmentImgInput = document.createElement('input');
+    garmentImgInput.type = 'file';
+    garmentImgInput.accept = 'image/*';
+
+    // 2. Identify UI elements precisely using the labels
+    const labels = Array.from(document.querySelectorAll('label'));
+    const profileLabel = labels.find(l => l.innerText.toLowerCase().includes('your profile') || l.innerText.toLowerCase().includes('1.'));
+    const garmentLabel = labels.find(l => l.innerText.toLowerCase().includes('garment') || l.innerText.toLowerCase().includes('2.'));
+    
+    let userZone = profileLabel ? profileLabel.nextElementSibling : null;
+    let garmentZone = garmentLabel ? garmentLabel.nextElementSibling : null;
+    
+    const generateBtn = Array.from(document.querySelectorAll('button')).find(b => b.innerText && b.innerText.toUpperCase().includes('GENERATE AI FITTING'));
+    
+    // Result area is the big display section on the right
+    const resultArea = Array.from(document.querySelectorAll('div')).find(d => d.innerText && d.innerText.includes('Awaiting Magic'));
+    const containerToUpdate = resultArea ? resultArea.parentElement : null;
+    
+    const heightInput = document.querySelector('input[type="number"]') || document.querySelector('input[value="170"]');
+
+    // Save initial state for reset
+    const initialUserZoneHTML = userZone ? userZone.innerHTML : '';
+    const initialGarmentZoneHTML = garmentZone ? garmentZone.innerHTML : '';
+    const initialResultHTML = containerToUpdate ? containerToUpdate.innerHTML : '';
+
+    if (!userZone || !garmentZone || !generateBtn || !containerToUpdate) {
+        console.error('Could not find upload zones or generate button!', {userZone, garmentZone, generateBtn, containerToUpdate});
+    }
+
+    const previewImg = (file, zone) => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            let img = zone.querySelector('img');
+            if (img) {
+                img.src = e.target.result;
+            } else {
+                zone.innerHTML = `<img src="${e.target.result}" class="w-full h-full object-contain rounded-lg" style="max-height: 150px; object-fit: contain;" />`;
+            }
+        };
+        reader.readAsDataURL(file);
+    };
+
+    // 3. Attach Events
+    if (userZone) {
+        userZone.style.cursor = 'pointer';
+        userZone.addEventListener('click', (e) => { e.stopPropagation(); userImgInput.click(); });
+    }
+    if (garmentZone) {
+        garmentZone.style.cursor = 'pointer';
+        garmentZone.addEventListener('click', (e) => { e.stopPropagation(); garmentImgInput.click(); });
+    }
+
+    userImgInput.onchange = () => userImgInput.files[0] && previewImg(userImgInput.files[0], userZone);
+    garmentImgInput.onchange = () => garmentImgInput.files[0] && previewImg(garmentImgInput.files[0], garmentZone);
+
+    // Provide a global reset function
+    window.resetTryOn = () => {
+        userImgInput.value = '';
+        garmentImgInput.value = '';
+        if (userZone) userZone.innerHTML = initialUserZoneHTML;
+        if (garmentZone) garmentZone.innerHTML = initialGarmentZoneHTML;
+        if (containerToUpdate) containerToUpdate.innerHTML = initialResultHTML;
+    };
+
+    generateBtn?.addEventListener('click', async () => {
+        if (!userImgInput.files[0] || !garmentImgInput.files[0]) {
+            alert('Please upload both your photo and a garment photo first!');
+            return;
+        }
+
+        const originalText = generateBtn.innerText;
+        generateBtn.innerText = 'GENERATING...';
+        generateBtn.disabled = true;
+        generateBtn.style.opacity = '0.7';
+
+        const tryonData = new FormData();
+        tryonData.append('person_image', userImgInput.files[0]);
+        tryonData.append('garment_image', garmentImgInput.files[0]);
+        
+        const measData = new FormData();
+        measData.append('person_image', userImgInput.files[0]);
+        measData.append('user_height', heightInput?.value || 170);
+
+        try {
+            const [tryonRes, measRes] = await Promise.all([
+                fetch('http://localhost:8000/tryon', { method: 'POST', body: tryonData }),
+                fetch('http://localhost:8000/measurements', { method: 'POST', body: measData })
+            ]);
+
+            if (tryonRes.ok) {
+                const blob = await tryonRes.blob();
+                const url = URL.createObjectURL(blob);
+                
+                let measurementsHtml = '';
+                if (measRes.ok) {
+                    const meas = await measRes.json();
+                    measurementsHtml = `
+                        <div class="mt-6 bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded-lg p-4 w-full max-w-sm">
+                            <h5 class="text-[#C9A84C] font-bold text-center mb-3 uppercase tracking-widest text-xs">AI Measurements</h5>
+                            <div class="grid grid-cols-2 gap-y-2 text-xs text-on-surface">
+                                <div class="text-on-surface/60">Shoulder:</div>
+                                <div class="font-semibold text-right">${meas.shoulder_width || 'N/A'}</div>
+                                <div class="text-on-surface/60">Chest/Torso:</div>
+                                <div class="font-semibold text-right">${meas.torso_length || 'N/A'}</div>
+                                <div class="text-on-surface/60">Hips:</div>
+                                <div class="font-semibold text-right">${meas.hip_width || 'N/A'}</div>
+                            </div>
+                            <div class="mt-3 pt-3 border-t border-[#C9A84C]/20 flex justify-between items-center">
+                                <span class="text-on-surface/60 text-xs">Recommended Size:</span>
+                                <span class="bg-[#C9A84C] text-white font-bold px-3 py-1 rounded text-sm">${meas.recommended_size || 'M'}</span>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                if (containerToUpdate) {
+                    containerToUpdate.innerHTML = `
+                        <div class="relative w-full h-full flex flex-col items-center justify-center p-4 overflow-y-auto">
+                            <img src="${url}" class="max-w-full max-h-[450px] object-contain rounded-xl shadow-2xl border-4 border-[#C9A84C]/30" />
+                            <p class="mt-4 text-[#C9A84C] font-bold tracking-widest uppercase text-sm">AI Fitting Ready</p>
+                            ${measurementsHtml}
+                            <button onclick="window.resetTryOn()" class="mt-6 border border-secondary text-secondary px-8 py-3 uppercase tracking-[0.2em] font-label-sm hover:bg-secondary hover:text-on-secondary transition-all flex items-center gap-2">
+                                <span class="material-symbols-outlined text-sm">refresh</span> Try Another Outfit
+                            </button>
+                        </div>
+                    `;
+                }
+            } else {
+                alert('AI Fitting failed. Make sure your backend is running!');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Error connecting to backend at http://localhost:8000');
+        } finally {
+            if(generateBtn) {
+                generateBtn.innerText = originalText;
+                generateBtn.disabled = false;
+                generateBtn.style.opacity = '1';
+            }
+        }
+    });
+
+    // --- RECOMMENDER LOGIC ---
+    try {
+        const response = await fetch('http://localhost:8000/recommend', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                community: currentCommunity,
+                preferred_categories: [],
+                price_range: [0, 1000],
+                past_purchases: [],
+                tags: []
+            })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            const recs = data.recommendations || [];
+            
+            if (recs.length > 0) {
+                const recSection = document.getElementById('recommended-section');
+                if(recSection) recSection.style.display = 'block';
+                const grid = document.getElementById('recommendations-grid');
+                if(grid) {
+                    grid.innerHTML = '';
+                    recs.slice(0, 4).forEach(item => {
+                        grid.innerHTML += `
+                            <div class="group cursor-pointer">
+                                <div class="relative bg-surface-container-low aspect-[3/4] mb-4 overflow-hidden border border-outline-variant/30 flex items-center justify-center p-8">
+                                    <span class="material-symbols-outlined text-6xl text-secondary/20" style="font-variation-settings: 'wght' 200;">apparel</span>
+                                    <div class="absolute inset-0 bg-primary-container/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                                        <button class="border border-secondary text-secondary px-6 py-2 uppercase tracking-[0.2em] font-label-sm hover:bg-secondary hover:text-on-secondary transition-all">
+                                            View Details
+                                        </button>
+                                    </div>
+                                    <div class="absolute top-4 right-4 bg-surface-container-highest/80 backdrop-blur-md px-2 py-1 flex items-center gap-1 border border-outline-variant/50">
+                                        <span class="material-symbols-outlined text-[10px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="text-[10px] font-bold">${item.rating}</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-start gap-4">
+                                    <div>
+                                        <h4 class="font-label-lg uppercase tracking-wider text-on-surface mb-1">${item.name}</h4>
+                                        <p class="font-body-md text-xs text-on-surface/40 uppercase tracking-widest">${item.category}</p>
+                                    </div>
+                                    <span class="font-label-lg text-secondary">$${item.price.toFixed(2)}</span>
+                                </div>
+                                <div class="mt-3 text-[10px] text-secondary/80 bg-secondary/5 inline-block px-2 py-1 rounded border border-secondary/10">
+                                    <span class="material-symbols-outlined text-[10px] align-middle mr-1">auto_awesome</span>
+                                    ${item.explanation.split('|')[0]}
+                                </div>
+                            </div>
+                        `;
+                    });
+                }
+            }
+        }
+    } catch (err) {
+        console.error("Failed to load recommendations:", err);
+    }
+});
+</script>
+</body></html>
+
+
+
+
+
+
+

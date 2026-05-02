@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AuraFit - Modest Elegance Community Store</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#755b00",
+                        "primary-fixed": "#d6e4f9",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary": "#000000",
+                        "surface-tint": "#525f71",
+                        "primary-container": "#0f1c2c",
+                        "on-primary-fixed": "#0f1c2c",
+                        "tertiary-fixed-dim": "#c8c6c4",
+                        "inverse-primary": "#bac8dc",
+                        "tertiary-fixed": "#e4e2df",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-secondary-fixed-variant": "#584400",
+                        "on-primary-fixed-variant": "#3a4859",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#ffe08f",
+                        "outline": "#74777d",
+                        "tertiary-container": "#1b1c1a",
+                        "primary-fixed-dim": "#bac8dc",
+                        "on-tertiary-fixed": "#1b1c1a",
+                        "surface-bright": "#f9f9f9",
+                        "inverse-surface": "#2f3131",
+                        "background": "#f9f9f9",
+                        "primary": "#000000",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-container-low": "#f3f3f4",
+                        "on-primary-container": "#778598",
+                        "outline-variant": "#c4c6cc",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "on-surface-variant": "#44474c",
+                        "on-tertiary-container": "#848481",
+                        "secondary-container": "#fed977",
+                        "error-container": "#ffdad6",
+                        "surface": "#f9f9f9",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#dadada",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#e6c364",
+                        "on-secondary-container": "#785d00",
+                        "on-secondary-fixed": "#241a00",
+                        "on-surface": "#1a1c1c",
+                        "on-tertiary-fixed-variant": "#474745",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "lg": "48px",
+                        "xl": "80px",
+                        "grid-gutter": "24px",
+                        "sm": "12px",
+                        "grid-margin": "64px",
+                        "base": "8px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Noto Serif"],
+                        "headline-lg": ["Noto Serif"],
+                        "display-md": ["Noto Serif"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Noto Serif"],
+                        "body-lg": ["Inter"],
+                        "label-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                        "headline-md": ["22px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "headline-lg": ["28px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "display-md": ["36px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { background-color: #f9f9f9; }
+    </style>
+</head>
+<body class="font-body-md text-on-background selection:bg-secondary-container">
+<!-- 1. ANNOUNCEMENT BAR -->
+<div class="bg-primary-container py-2 text-center">
+<p class="font-label-sm text-secondary-fixed uppercase tracking-widest">
+            ✨ COMPLIMENTARY SHIPPING ON ORDERS OVER $150 | DISCOVER THE LUXE COLLECTION ✨
+        </p>
+</div>
+<!-- 2. NAVBAR & BREADCRUMB -->
+<header class="bg-[#F9F7F4] border-b border-secondary/20 sticky top-0 z-50">
+<div class="px-grid-margin py-4 flex items-center justify-between gap-md">
+<div class="flex items-center">
+<a class="font-headline-lg text-[#0D1B2A]" href="home.html">Aura<span class="text-secondary">Fit</span></a>
+</div>
+<div class="flex-1 max-w-xl hidden md:block">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full bg-white border-none border-b border-primary focus:ring-0 font-body-md py-2 pl-10 text-sm" placeholder="Search Collections..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<button class="hover:text-secondary transition-colors"><span class="material-symbols-outlined" data-icon="person">person</span></button>
+<button class="hover:text-secondary transition-colors"><span class="material-symbols-outlined" data-icon="favorite">favorite</span></button>
+<a class="hover:text-secondary transition-colors" href="bag.html"><span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span></a>
+</div>
+</div>
+<div class="px-grid-margin py-2 border-t border-secondary/10">
+<nav class="font-label-sm text-outline flex items-center gap-2">
+<a class="hover:text-primary cursor-pointer" href="home.html">Home</a>
+<span class="material-symbols-outlined text-[10px]">chevron_right</span>
+<span class="text-primary font-semibold">Modest Elegance</span>
+</nav>
+</div>
+</header>
+<!-- 3. SECONDARY NAV -->
+<nav class="bg-white border-b border-surface-container overflow-x-auto">
+<div class="px-grid-margin flex justify-center space-x-xl py-4 whitespace-nowrap">
+<a class="font-label-lg text-outline hover:text-primary transition-all" href="home.html">Bazaar</a>
+<a class="font-label-lg text-outline hover:text-primary transition-all" href="hindu.html">Festive</a>
+<a class="font-label-lg text-primary border-b-2 border-secondary pb-1 font-bold" href="muslim.html">Modest</a>
+<a class="font-label-lg text-outline hover:text-primary transition-all" href="buddhist.html">Zen</a>
+<a class="font-label-lg text-outline hover:text-primary transition-all" href="sikh.html">Heritage</a>
+<a class="font-label-lg text-outline hover:text-primary transition-all" href="christian.html">Sunday</a>
+<a class="font-label-lg text-outline hover:text-primary transition-all" href="home.html">Beauty</a>
+<a class="font-label-lg text-outline hover:text-primary transition-all" href="home.html">Virtual Studio</a>
+</div>
+</nav>
+<!-- 4. HERO BANNER -->
+<section class="relative h-[500px] flex items-center overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-[#059669] to-[#0F766E]"></div>
+<div class="relative z-10 px-grid-margin max-w-4xl">
+<span class="font-label-lg text-secondary-fixed tracking-[0.2em] uppercase mb-4 block">MUSLIM MODEST WEAR</span>
+<h1 class="font-display-lg text-white mb-6">Modest Elegance</h1>
+<p class="font-body-lg text-white/90 mb-lg max-w-2xl">Discover beautifully crafted modest wear for every occasion — from daily prayer to grand celebrations. Experience heritage luxury designed for the modern spirit.</p>
+<button class="bg-white text-primary px-xl py-4 font-label-lg hover:bg-secondary-fixed transition-all uppercase">Shop the Collection</button>
+</div>
+<div class="absolute right-0 top-0 h-full w-1/3 opacity-20 pointer-events-none">
+<img alt="Pattern" class="h-full w-full object-cover" data-alt="Intricate geometric Islamic art pattern etched onto a translucent glass surface, backlit by soft emerald green and gold studio lighting. The aesthetic is extremely minimalist and luxury-focused, with sharp focus on the fine lines and a blurred, dark teal background that provides a rich, layered three-dimensional depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCda3KTzc2192IAOGnuUabHZczxIWuzcZBeAdaMyahWQeMv_gjlqoM-J96ZJPNscn-qaRZKnwB2V8D5BI1iJh_5vaymuz7214Mb5EeImTMtE4IlevR4LLBhklAyyIi6SWZthMhbra_8mMXvtyMBgNOpP5XdHd8JmMDBZrbGrnw-yTycEHW0X2y_N5obR4-Z5o0aeOlzeOEoeP2GEi1N2c4bghoQNki-ESfpgBuWjUOj0sa5aMv1rM7rF43mk-Rnhl2Dj19BMo2yzlcn"/>
+</div>
+</section>
+<main class="py-xl">
+<!-- 5. PRODUCT GRID -->
+<section class="px-grid-margin mb-xl">
+<div class="flex justify-between items-end mb-lg">
+<h2 class="font-display-md text-primary">Latest Arrivals</h2>
+<a class="font-label-lg text-secondary border-b border-secondary" href="home.html">View All</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-grid-gutter">
+<!-- Product 1 -->
+<div class="group">
+<div class="aspect-[3/4] bg-[#F3F3F1] relative mb-md overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated black abaya with subtle embroidery details draped over a minimalist cream-colored mannequin. The setting is a bright, high-end boutique with soft natural lighting and warm grey flooring, conveying a sense of serene luxury and traditional elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVqzNGQFvS0DjPHCEaK8f_0kCoLfhoHQyivrlq2exQDgfe72R-8cadFXdqdiFUh0HB_xmqABz3FIw7erNrFJZA2UA3vr1c1UoPRc0GVxYWnZNNH9TaJYtCaGNs5Caw29ps5jS1ZOxoPdl1e9zIUQo833o3LxD5yUCIzP-hh6GkwavYhbBEmpYfjnYDVbeuVXx21JCJRPvW6Whq6ItT3kmY3aFnBLy8k03jjaFM5wSETovi_ssawkid3uiPTbpacfeo3fOy0l6CmJZd"/>
+<div class="absolute top-3 left-3 bg-error text-white font-label-sm px-2 py-1">19% OFF</div>
+<button class="absolute top-3 right-3 text-primary-container hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 bg-white/90 px-2 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="font-label-sm">4.6</span>
+</div>
+</div>
+<p class="font-label-sm text-outline uppercase">Modanisa</p>
+<h3 class="font-headline-md text-base mb-2">Classic Black Abaya</h3>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-primary">$65</span>
+<span class="font-label-sm text-outline line-through">$80</span>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group">
+<div class="aspect-[3/4] bg-[#F3F3F1] relative mb-md overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious georgette hijab scarf in a soft champagne tone, neatly folded and resting on a textured linen surface. Soft, directional light from a nearby window creates delicate shadows and highlights the airy, premium quality of the fabric within a minimalist, luxury studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBne6B1PxyF4c3cvKuZyAKqnXlptca88-VLEqV3brLtvFJtiE08VlEs4JZb_K66NiA7XnOsyNxnwpb1BiqWonOh_ENnYj_BDcTG8qvmy7Hy0Y7rUNhasDWfqdfex1D7cOf_XH6_lVoCP3dtbud9k0olaBMy2pkIMrMhOak0vq7N2gFb7ejMK8Vf4V9jtG5JfUWhVOK8JPbvKNqLjj1OpUisp1tpZTO0sdSMhzyXJarekR2AX1yqHlIlFDdVbV-j-JRXYsbGFtLFueja"/>
+<div class="absolute top-3 left-3 bg-error text-white font-label-sm px-2 py-1">40% OFF</div>
+<button class="absolute top-3 right-3 text-primary-container">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 bg-white/90 px-2 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="font-label-sm">4.8</span>
+</div>
+</div>
+<p class="font-label-sm text-outline uppercase">Haute Hijab</p>
+<h3 class="font-headline-md text-base mb-2">Georgette Hijab Scarf</h3>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-primary">$15</span>
+<span class="font-label-sm text-outline line-through">$25</span>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group">
+<div class="aspect-[3/4] bg-[#F3F3F1] relative mb-md overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A men's embroidered thobe in crisp white with intricate silver thread detailing around the collar. The garment is presented in a high-key, bright minimalist studio with soft diffused lighting that emphasizes the fine stitching and premium fabric texture, suitable for a luxury traditional wear catalog." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8N6Ke6T6RPb8-fU4NbRaDQkg2qqdQ5BRhE7Fc3hd9y1Lh6jm-tkumVm7Ns8_ea0vho7wYnR7sgSGEMJdzdKGN9pEaaXE5WkbKWNvoGVA8NQ-TvrE5sFqOr6cjfma07Pey7pCpbanvKd67u5NtK82y1JiDPinMie3cbTXoiteN5rVRBbhZ0ymuT0uF3fVvAdczPrUQOgeLsmfUpdi6eRLMvGunGSsTR-RFu_uGLR_mTrwj52F6HtatrlAkx-y_Hsf_OEpFGkj4LQml"/>
+<div class="absolute top-3 left-3 bg-error text-white font-label-sm px-2 py-1">27% OFF</div>
+<button class="absolute top-3 right-3 text-primary-container">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 bg-white/90 px-2 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="font-label-sm">4.5</span>
+</div>
+</div>
+<p class="font-label-sm text-outline uppercase">Shukr</p>
+<h3 class="font-headline-md text-base mb-2">Embroidered Thobe</h3>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-primary">$55</span>
+<span class="font-label-sm text-outline line-through">$75</span>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group">
+<div class="aspect-[3/4] bg-[#F3F3F1] relative mb-md overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern modest tunic top in a muted sage green color, styled with clean lines and a relaxed fit. The image is captured in a minimalist interior space with limestone walls and warm ambient light, highlighting the contemporary yet modest silhouette of the high-end garment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb3ZH1e4QjKsNyANOov5UeAFuHRF7h5niIAsQmiEmd1cGu6BiLi4a1K5EnDCpE9g_DciNw3jhwc_huTRZoeFOrZT-8wgNKPD-KDgXgVoiURRCHWA9pW0S4kwLctodVptjQJXOvdDAVYOrn9vJJIY-NI_L0mQ61MAkHcqXEC5IhlojcBRD9W_WCDxTGdRRysGvt9wGVHHXrAK2mS5K7KtXmkMHv2KbwWTcHrVaHsQUSJmKxBSoSlnJYHsfhnEhtjkJGvmaFfhAN0qBq"/>
+<div class="absolute top-3 left-3 bg-error text-white font-label-sm px-2 py-1">25% OFF</div>
+<button class="absolute top-3 right-3 text-primary-container">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 bg-white/90 px-2 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="font-label-sm">4.3</span>
+</div>
+</div>
+<p class="font-label-sm text-outline uppercase">EastEssence</p>
+<h3 class="font-headline-md text-base mb-2">Modest Tunic Top</h3>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-primary">$30</span>
+<span class="font-label-sm text-outline line-through">$40</span>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="group">
+<div class="aspect-[3/4] bg-[#F3F3F1] relative mb-md overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A finely woven white kufi prayer cap with subtle geometric patterns, resting on a dark polished wood surface. The lighting is moody and focused, highlighting the artisanal texture of the weave against a deep navy background, creating a sophisticated and reverent atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASFIV8bBoKBw-puFuOecec130jVG_wRy2M-x6D6pcDlWSrj6LQzBDpb7NsBnO1MwlGZ66D978urn0duM3RXZTiQ50hm30GLKvI5zbLmhifWMCUUgB5HiG7a7vH_Xj1Pozr2FLkhqV9vI-Zc4uCnjlKnxR0ndFrCgAQNHi0-mZ-OTHKtxmli0L47skJNfWzBWyuxS9du20LnWx--I3GgxAmkKW0tDx8l4-GgCVA-peSBcgcgnrFZ7LipH8fPbgBd7DeLrBT234Gp77S"/>
+<div class="absolute top-3 left-3 bg-error text-white font-label-sm px-2 py-1">33% OFF</div>
+<button class="absolute top-3 right-3 text-primary-container">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 bg-white/90 px-2 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="font-label-sm">4.5</span>
+</div>
+</div>
+<p class="font-label-sm text-outline uppercase">Al-Haramain</p>
+<h3 class="font-headline-md text-base mb-2">Prayer Cap (Kufi)</h3>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-primary">$10</span>
+<span class="font-label-sm text-outline line-through">$15</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. EDITORIAL BANNER -->
+<section class="px-grid-margin mb-xl">
+<div class="bg-primary-container flex flex-col md:flex-row h-[400px]">
+<div class="w-full md:w-1/2 bg-[#0D1B2A] p-lg flex flex-col justify-center">
+<h2 class="font-display-md text-secondary-fixed mb-4 italic">The Modest Edit</h2>
+<p class="font-body-md text-white/80 mb-lg">Experience the perfect blend of tradition and contemporary style. Our curated edit brings you the finest fabrics and most elegant silhouettes for the modern modest woman.</p>
+<div class="flex">
+<button class="border border-secondary-fixed text-secondary-fixed px-xl py-3 font-label-lg hover:bg-secondary-fixed/10 transition-all uppercase">Explore Edit</button>
+</div>
+</div>
+<div class="hidden md:block w-1/2 relative">
+<img class="w-full h-full object-cover" data-alt="A portrait of a woman in high-end modest fashion, featuring an elegant emerald green hijab and a matching silk gown. She stands in a sunlit architectural space with soft shadows, creating a serene and exclusive mood that reflects heritage luxury and modern sophistication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXtOXCrjn74QIrVTyxV-My2Hz8fQBdWZUkzJeUr8Lhh4EFQFESIui1kQ4bcxr0IpdxW61B7crhHNcmI6lPhomE3_fHYk--PqN16eSsRsBozeg9XGnssSevTRpNK3aGzIp_P5CckADV4Ikc_zpH5_0tN27XH3kFBE5zUF77NWz-C5QYHCtDXoQ0OovhGo8qhbYeM_PpaF62wQ_FZYDiwpmRnIuAsiFHOaeWvwNlG3JR5JO_WD5FI8ReuMaVONCdDR05BPFHSjDaBoYO"/>
+</div>
+</div>
+</section>
+<!-- 7. FITTING ROOM STUDIO -->
+<section class="px-grid-margin mb-xl">
+<div class="bg-white border border-secondary/10 shadow-xl flex flex-col md:flex-row overflow-hidden">
+<div class="w-full md:w-5/12 bg-[#F9F7F4] p-lg border-r border-secondary/10">
+<h3 class="font-headline-lg text-primary mb-lg">AI Virtual Fitting</h3>
+<div class="space-y-md">
+<div>
+<label class="font-label-sm text-outline mb-2 block">1. YOUR PROFILE</label>
+<div class="border-2 border-dashed border-secondary/30 bg-white p-6 text-center cursor-pointer hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-outline mb-2">upload</span>
+<p class="font-label-sm text-outline">Upload a full-length photo</p>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-outline mb-2 block">2. THE GARMENT</label>
+<div class="border-2 border-dashed border-secondary/30 bg-white p-6 text-center cursor-pointer hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-outline mb-2">checkroom</span>
+<p class="font-label-sm text-outline">Select from catalog or upload</p>
+</div>
+</div>
+<div class="pb-md">
+<label class="font-label-sm text-outline mb-2 block">3. HEIGHT (FOR SCALE)</label>
+<div class="flex border-b border-primary items-center">
+<input class="flex-1 bg-transparent border-none focus:ring-0 font-body-md py-2" type="number" value="170"/>
+<span class="font-label-sm text-outline">CM</span>
+</div>
+</div>
+<button class="w-full bg-primary-container text-secondary-fixed py-4 font-label-lg uppercase tracking-widest hover:bg-black transition-all">GENERATE AI FITTING</button>
+</div>
+</div>
+<div class="w-full md:w-7/12 p-xl flex flex-col items-center justify-center text-center bg-white">
+<span class="material-symbols-outlined text-secondary text-5xl mb-md">auto_awesome</span>
+<h4 class="font-headline-lg text-primary mb-2">Awaiting Magic</h4>
+<p class="font-body-md text-outline max-w-sm">Upload your profile and select a garment to see how it flows and fits on your unique silhouette.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- 8. PRODUCT MODAL (Side Slide-out) -->
+<div class="fixed inset-0 z-[100] pointer-events-none">
+<div class="absolute inset-0 bg-black/40 backdrop-blur-sm pointer-events-auto opacity-0 invisible"></div>
+<div class="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-2xl pointer-events-auto translate-x-full transition-transform duration-500 ease-in-out p-lg flex flex-col">
+<button class="absolute top-4 right-4 text-outline hover:text-primary">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="flex-1 overflow-y-auto space-y-lg pr-2">
+<div class="aspect-[3/4] bg-[#F3F3F1]">
+<img class="w-full h-full object-cover" data-alt="Close-up of a high-end black abaya with intricate tonal embroidery. The lighting is soft and luxurious, capturing the fine texture of the crepe fabric and the delicate sparkle of the embroidery thread within a premium fashion studio context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4H5BQlpj7VN3x0QwkuFQdThT7NI23560DbEP1ID8MnQ527EzH3Eoy7MdE4jlpe_Wc6J1vCzpvdTCKz2zxuGFww-nM7-25V2iPOiDdMbjThYSl-EFvlto1L4PWGYyTNx4PBvg99UlYlDDtJFgTClVGbDLzV0Og8MI6VJJhoynlDFJtkTsiHfPd6TJagITgZWPUd7wZEM8E4sOqAxLqQbGgkEURlnJaDy0RHPTcvvFNzy1FNmfdvxvVtL1Hhkvl86lyhpMbpFdZll97"/>
+</div>
+<div>
+<p class="font-label-sm text-secondary uppercase mb-1">Modanisa</p>
+<h2 class="font-headline-lg text-primary mb-md">Classic Black Abaya</h2>
+<div class="flex items-center gap-md mb-lg">
+<span class="font-display-md text-primary">$65</span>
+<span class="font-body-lg text-outline line-through">$80</span>
+<span class="text-error font-label-sm">19% OFF</span>
+</div>
+<div class="mb-lg">
+<div class="flex justify-between items-center mb-sm">
+<label class="font-label-lg">SELECT SIZE</label>
+<a class="font-label-sm text-secondary underline" href="home.html">Size Guide</a>
+</div>
+<div class="grid grid-cols-4 gap-2">
+<button class="border border-surface-container py-3 font-label-sm hover:border-primary">S</button>
+<button class="border-2 border-primary py-3 font-label-sm bg-primary-container text-white">M</button>
+<button class="border border-surface-container py-3 font-label-sm hover:border-primary">L</button>
+<button class="border border-surface-container py-3 font-label-sm hover:border-primary">XL</button>
+</div>
+</div>
+<div class="flex flex-col gap-sm mb-xl">
+<button class="bg-primary-container text-white py-4 font-label-lg uppercase tracking-widest hover:bg-black transition-all">ADD TO BAG</button>
+<button class="border border-primary text-primary py-4 font-label-lg uppercase tracking-widest hover:bg-surface-container transition-all">WISHLIST</button>
+</div>
+<div class="bg-secondary-fixed/20 p-md flex items-center justify-between">
+<div>
+<p class="font-label-lg text-primary">Not sure about the fit?</p>
+<p class="font-body-md text-xs">Try it on our Virtual Studio</p>
+</div>
+<button class="bg-secondary text-white px-md py-2 font-label-sm uppercase">TRY IT ON NOW</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 9. FOOTER -->
+<footer class="bg-primary-container py-xl px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-xl mb-xl">
+<div class="space-y-md">
+<span class="text-white font-display-md font-light">AuraFit</span>
+<p class="font-body-md text-slate-400 text-sm leading-relaxed">Redefining modest fashion through heritage luxury and modern innovation. Join our global community in celebrating elegance in reverence.</p>
+</div>
+<div class="space-y-md">
+<h4 class="font-label-lg text-secondary-fixed uppercase tracking-widest">Global Studios</h4>
+<ul class="space-y-sm">
+<li><a class="font-label-sm text-slate-400 hover:text-secondary-fixed transition-colors" href="home.html">Dubai Mall Boutique</a></li>
+<li><a class="font-label-sm text-slate-400 hover:text-secondary-fixed transition-colors" href="home.html">London Knightsbridge</a></li>
+<li><a class="font-label-sm text-slate-400 hover:text-secondary-fixed transition-colors" href="home.html">Jakarta Central</a></li>
+<li><a class="font-label-sm text-slate-400 hover:text-secondary-fixed transition-colors" href="home.html">Riyadh Gallery</a></li>
+</ul>
+</div>
+<div class="space-y-md">
+<h4 class="font-label-lg text-secondary-fixed uppercase tracking-widest">Customer Care</h4>
+<ul class="space-y-sm">
+<li><a class="font-label-sm text-slate-400 hover:text-secondary-fixed transition-colors" href="home.html">Shipping Policy</a></li>
+<li><a class="font-label-sm text-slate-400 hover:text-secondary-fixed transition-colors" href="home.html">Returns &amp; Exchanges</a></li>
+<li><a class="font-label-sm text-slate-400 hover:text-secondary-fixed transition-colors" href="muslim.html">Modest Style Guide</a></li>
+<li><a class="font-label-sm text-slate-400 hover:text-secondary-fixed transition-colors" href="home.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="space-y-md">
+<h4 class="font-label-lg text-secondary-fixed uppercase tracking-widest">Newsletter</h4>
+<p class="font-body-md text-slate-400 text-sm">Join for exclusive early access to the Luxe Collection.</p>
+<div class="flex border-b border-secondary-fixed/30 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-white font-label-sm w-full p-0" placeholder="Email Address" type="email"/>
+<button class="text-secondary-fixed"><span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+</div>
+<div class="border-t border-secondary-fixed/10 pt-lg text-center">
+<p class="font-label-sm text-slate-500 uppercase tracking-[0.2em]">© 2024 AuraFit Community Stores. All Rights Reserved.</p>
+</div>
+</footer>
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+    // Determine community from URL (for recommender later)
+    const path = window.location.pathname.toLowerCase();
+    let currentCommunity = "Hindu";
+    if (path.includes("muslim")) currentCommunity = "Muslim";
+    if (path.includes("sikh")) currentCommunity = "Sikh";
+    if (path.includes("buddhist")) currentCommunity = "Buddhist";
+    if (path.includes("christian")) currentCommunity = "Christian";
+
+    // --- TRY-ON LOGIC ---
+    // 1. Create hidden file inputs
+    const userImgInput = document.createElement('input');
+    userImgInput.type = 'file';
+    userImgInput.accept = 'image/*';
+    
+    const garmentImgInput = document.createElement('input');
+    garmentImgInput.type = 'file';
+    garmentImgInput.accept = 'image/*';
+
+    // 2. Identify UI elements precisely using the labels
+    const labels = Array.from(document.querySelectorAll('label'));
+    const profileLabel = labels.find(l => l.innerText.toLowerCase().includes('your profile') || l.innerText.toLowerCase().includes('1.'));
+    const garmentLabel = labels.find(l => l.innerText.toLowerCase().includes('garment') || l.innerText.toLowerCase().includes('2.'));
+    
+    let userZone = profileLabel ? profileLabel.nextElementSibling : null;
+    let garmentZone = garmentLabel ? garmentLabel.nextElementSibling : null;
+    
+    const generateBtn = Array.from(document.querySelectorAll('button')).find(b => b.innerText && b.innerText.toUpperCase().includes('GENERATE AI FITTING'));
+    
+    // Result area is the big display section on the right
+    const resultArea = Array.from(document.querySelectorAll('div')).find(d => d.innerText && d.innerText.includes('Awaiting Magic'));
+    const containerToUpdate = resultArea ? resultArea.parentElement : null;
+    
+    const heightInput = document.querySelector('input[type="number"]') || document.querySelector('input[value="170"]');
+
+    // Save initial state for reset
+    const initialUserZoneHTML = userZone ? userZone.innerHTML : '';
+    const initialGarmentZoneHTML = garmentZone ? garmentZone.innerHTML : '';
+    const initialResultHTML = containerToUpdate ? containerToUpdate.innerHTML : '';
+
+    if (!userZone || !garmentZone || !generateBtn || !containerToUpdate) {
+        console.error('Could not find upload zones or generate button!', {userZone, garmentZone, generateBtn, containerToUpdate});
+    }
+
+    const previewImg = (file, zone) => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            let img = zone.querySelector('img');
+            if (img) {
+                img.src = e.target.result;
+            } else {
+                zone.innerHTML = `<img src="${e.target.result}" class="w-full h-full object-contain rounded-lg" style="max-height: 150px; object-fit: contain;" />`;
+            }
+        };
+        reader.readAsDataURL(file);
+    };
+
+    // 3. Attach Events
+    if (userZone) {
+        userZone.style.cursor = 'pointer';
+        userZone.addEventListener('click', (e) => { e.stopPropagation(); userImgInput.click(); });
+    }
+    if (garmentZone) {
+        garmentZone.style.cursor = 'pointer';
+        garmentZone.addEventListener('click', (e) => { e.stopPropagation(); garmentImgInput.click(); });
+    }
+
+    userImgInput.onchange = () => userImgInput.files[0] && previewImg(userImgInput.files[0], userZone);
+    garmentImgInput.onchange = () => garmentImgInput.files[0] && previewImg(garmentImgInput.files[0], garmentZone);
+
+    // Provide a global reset function
+    window.resetTryOn = () => {
+        userImgInput.value = '';
+        garmentImgInput.value = '';
+        if (userZone) userZone.innerHTML = initialUserZoneHTML;
+        if (garmentZone) garmentZone.innerHTML = initialGarmentZoneHTML;
+        if (containerToUpdate) containerToUpdate.innerHTML = initialResultHTML;
+    };
+
+    generateBtn?.addEventListener('click', async () => {
+        if (!userImgInput.files[0] || !garmentImgInput.files[0]) {
+            alert('Please upload both your photo and a garment photo first!');
+            return;
+        }
+
+        const originalText = generateBtn.innerText;
+        generateBtn.innerText = 'GENERATING...';
+        generateBtn.disabled = true;
+        generateBtn.style.opacity = '0.7';
+
+        const tryonData = new FormData();
+        tryonData.append('person_image', userImgInput.files[0]);
+        tryonData.append('garment_image', garmentImgInput.files[0]);
+        
+        const measData = new FormData();
+        measData.append('person_image', userImgInput.files[0]);
+        measData.append('user_height', heightInput?.value || 170);
+
+        try {
+            const [tryonRes, measRes] = await Promise.all([
+                fetch('http://localhost:8000/tryon', { method: 'POST', body: tryonData }),
+                fetch('http://localhost:8000/measurements', { method: 'POST', body: measData })
+            ]);
+
+            if (tryonRes.ok) {
+                const blob = await tryonRes.blob();
+                const url = URL.createObjectURL(blob);
+                
+                let measurementsHtml = '';
+                if (measRes.ok) {
+                    const meas = await measRes.json();
+                    measurementsHtml = `
+                        <div class="mt-6 bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded-lg p-4 w-full max-w-sm">
+                            <h5 class="text-[#C9A84C] font-bold text-center mb-3 uppercase tracking-widest text-xs">AI Measurements</h5>
+                            <div class="grid grid-cols-2 gap-y-2 text-xs text-on-surface">
+                                <div class="text-on-surface/60">Shoulder:</div>
+                                <div class="font-semibold text-right">${meas.shoulder_width || 'N/A'}</div>
+                                <div class="text-on-surface/60">Chest/Torso:</div>
+                                <div class="font-semibold text-right">${meas.torso_length || 'N/A'}</div>
+                                <div class="text-on-surface/60">Hips:</div>
+                                <div class="font-semibold text-right">${meas.hip_width || 'N/A'}</div>
+                            </div>
+                            <div class="mt-3 pt-3 border-t border-[#C9A84C]/20 flex justify-between items-center">
+                                <span class="text-on-surface/60 text-xs">Recommended Size:</span>
+                                <span class="bg-[#C9A84C] text-white font-bold px-3 py-1 rounded text-sm">${meas.recommended_size || 'M'}</span>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                if (containerToUpdate) {
+                    containerToUpdate.innerHTML = `
+                        <div class="relative w-full h-full flex flex-col items-center justify-center p-4 overflow-y-auto">
+                            <img src="${url}" class="max-w-full max-h-[450px] object-contain rounded-xl shadow-2xl border-4 border-[#C9A84C]/30" />
+                            <p class="mt-4 text-[#C9A84C] font-bold tracking-widest uppercase text-sm">AI Fitting Ready</p>
+                            ${measurementsHtml}
+                            <button onclick="window.resetTryOn()" class="mt-6 border border-secondary text-secondary px-8 py-3 uppercase tracking-[0.2em] font-label-sm hover:bg-secondary hover:text-on-secondary transition-all flex items-center gap-2">
+                                <span class="material-symbols-outlined text-sm">refresh</span> Try Another Outfit
+                            </button>
+                        </div>
+                    `;
+                }
+            } else {
+                alert('AI Fitting failed. Make sure your backend is running!');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Error connecting to backend at http://localhost:8000');
+        } finally {
+            if(generateBtn) {
+                generateBtn.innerText = originalText;
+                generateBtn.disabled = false;
+                generateBtn.style.opacity = '1';
+            }
+        }
+    });
+
+    // --- RECOMMENDER LOGIC ---
+    try {
+        const response = await fetch('http://localhost:8000/recommend', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                community: currentCommunity,
+                preferred_categories: [],
+                price_range: [0, 1000],
+                past_purchases: [],
+                tags: []
+            })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            const recs = data.recommendations || [];
+            
+            if (recs.length > 0) {
+                const recSection = document.getElementById('recommended-section');
+                if(recSection) recSection.style.display = 'block';
+                const grid = document.getElementById('recommendations-grid');
+                if(grid) {
+                    grid.innerHTML = '';
+                    recs.slice(0, 4).forEach(item => {
+                        grid.innerHTML += `
+                            <div class="group cursor-pointer">
+                                <div class="relative bg-surface-container-low aspect-[3/4] mb-4 overflow-hidden border border-outline-variant/30 flex items-center justify-center p-8">
+                                    <span class="material-symbols-outlined text-6xl text-secondary/20" style="font-variation-settings: 'wght' 200;">apparel</span>
+                                    <div class="absolute inset-0 bg-primary-container/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                                        <button class="border border-secondary text-secondary px-6 py-2 uppercase tracking-[0.2em] font-label-sm hover:bg-secondary hover:text-on-secondary transition-all">
+                                            View Details
+                                        </button>
+                                    </div>
+                                    <div class="absolute top-4 right-4 bg-surface-container-highest/80 backdrop-blur-md px-2 py-1 flex items-center gap-1 border border-outline-variant/50">
+                                        <span class="material-symbols-outlined text-[10px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="text-[10px] font-bold">${item.rating}</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-start gap-4">
+                                    <div>
+                                        <h4 class="font-label-lg uppercase tracking-wider text-on-surface mb-1">${item.name}</h4>
+                                        <p class="font-body-md text-xs text-on-surface/40 uppercase tracking-widest">${item.category}</p>
+                                    </div>
+                                    <span class="font-label-lg text-secondary">$${item.price.toFixed(2)}</span>
+                                </div>
+                                <div class="mt-3 text-[10px] text-secondary/80 bg-secondary/5 inline-block px-2 py-1 rounded border border-secondary/10">
+                                    <span class="material-symbols-outlined text-[10px] align-middle mr-1">auto_awesome</span>
+                                    ${item.explanation.split('|')[0]}
+                                </div>
+                            </div>
+                        `;
+                    });
+                }
+            }
+        }
+    } catch (err) {
+        console.error("Failed to load recommendations:", err);
+    }
+});
+</script>
+</body></html>
+
+
+
+
+
+
+

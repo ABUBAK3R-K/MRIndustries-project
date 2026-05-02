@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f9f9f9;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#bac8dc",
+                        "surface-dim": "#dadada",
+                        "surface": "#f9f9f9",
+                        "primary-container": "#0f1c2c",
+                        "error": "#ba1a1a",
+                        "tertiary": "#000000",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#bac8dc",
+                        "surface-tint": "#525f71",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-bright": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "tertiary-container": "#1b1c1a",
+                        "on-primary-container": "#778598",
+                        "inverse-surface": "#2f3131",
+                        "secondary-container": "#fed977",
+                        "outline": "#74777d",
+                        "primary-fixed": "#d6e4f9",
+                        "on-tertiary-fixed": "#1b1c1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#0f1c2c",
+                        "secondary-fixed": "#ffe08f",
+                        "on-surface": "#1a1c1c",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-secondary-fixed-variant": "#584400",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f3f3f4",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "primary": "#000000",
+                        "on-tertiary-fixed-variant": "#474745",
+                        "on-surface-variant": "#44474c",
+                        "on-secondary-container": "#785d00",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#eeeeee",
+                        "outline-variant": "#c4c6cc",
+                        "on-tertiary-container": "#848481",
+                        "on-secondary-fixed": "#241a00",
+                        "tertiary-fixed-dim": "#c8c6c4",
+                        "secondary-fixed-dim": "#e6c364",
+                        "on-primary-fixed-variant": "#3a4859",
+                        "on-background": "#1a1c1c",
+                        "secondary": "#755b00",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#e4e2df"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "base-unit": "8px",
+                        "container-max": "1280px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "display-xl": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                        "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "0", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar Navigation Shell -->
+<nav class="bg-stone-50 dark:bg-slate-950 docked full-width top-0 z-50 border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none sticky">
+<div class="flex justify-between items-center px-6 py-4 md:px-16 max-w-7xl mx-auto">
+<div class="text-2xl font-serif tracking-tighter text-slate-900 dark:text-slate-100">AuraFit</div>
+<div class="hidden md:flex space-x-8">
+<a class="font-['Playfair_Display'] uppercase tracking-widest text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-300 hover:text-amber-600" href="hindu.html">Festive</a>
+<a class="font-['Playfair_Display'] uppercase tracking-widest text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-300 hover:text-amber-600" href="muslim.html">Modest</a>
+<a class="font-['Playfair_Display'] uppercase tracking-widest text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-300 hover:text-amber-600" href="buddhist.html">Zen</a>
+<a class="font-['Playfair_Display'] uppercase tracking-widest text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-300 hover:text-amber-600" href="sikh.html">Heritage</a>
+</div>
+<div class="flex items-center space-x-6 text-slate-900 dark:text-slate-100">
+<button class="transition-all active:opacity-80 active:scale-95">
+<span class="material-symbols-outlined" data-icon="shopping_bag" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+</button>
+<button class="transition-all active:opacity-80 active:scale-95">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 md:px-16 py-16">
+<header class="mb-12">
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Shopping Bag</h1>
+<p class="font-body-md text-on-surface-variant">Review your curated selection of global artisan heritage.</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Items List -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Item 1: Zen Collection -->
+<div class="flex flex-col md:flex-row gap-6 p-6 bg-surface-container-lowest shadow-[0_30px_30px_rgba(13,27,42,0.04)] rounded-lg group">
+<div class="w-full md:w-48 h-64 overflow-hidden rounded-lg bg-surface-container">
+<img alt="Artisan Brass Singing Bowl" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up shot of an Artisan Brass Singing Bowl resting on a rich silk cushion. The bowl has intricate hand-etched patterns reflecting soft, warm studio lighting. The background is a clean, minimalist off-white texture that emphasizes the premium craftsmanship. The color palette consists of deep metallic golds, bronze, and subtle charcoal shadows, evoking a sense of meditative luxury and artisan heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCunSXLZItXB8mXnW1NR_bUl_TT6pzOZq6d-RzgWyqebU0LC0D1amcNXjifFQhQ3TPk-bXYxg8GIQvQ2JMafRKwpGTF66507dqeKnAPuoYmZCkWPJw5yMcWzVgRLXHtZ2W06sCyD05qtZgRpKD4E2D5uF-_ZqgDXJ6JYOWdYVOSbV4mtoiEmtCHmcaejhNrjjrmgkohZ2hLA6ri7BCi9cXwu1b6HYhd4fK8A2gqq7B5YOrvC2oDEMSNwl7QceSVbiIzsQUV0cIIeRCV"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-on-secondary-container bg-secondary-container px-2 py-1 rounded-full mb-2 inline-block">Zen</span>
+<span class="font-headline-md text-headline-md text-primary">$240.00</span>
+</div>
+<h2 class="font-display-xl text-headline-md text-primary mb-1">Artisan Brass Singing Bowl</h2>
+<p class="font-body-md text-on-surface-variant text-sm">Hand-hammered in the Himalayas. Frequency: 432Hz.</p>
+<div class="mt-4 flex space-x-6 text-sm text-outline">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface">Size</span>
+<span class="text-on-surface font-medium">8.5" Diameter</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface">Quantity</span>
+<div class="flex items-center space-x-2 mt-1">
+<button class="w-6 h-6 border border-outline flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">1</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-start">
+<button class="flex items-center space-x-2 text-error hover:underline transition-all">
+<span class="material-symbols-outlined text-sm">delete</span>
+<span class="font-label-caps text-xs">Remove</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2: Heritage Collection -->
+<div class="flex flex-col md:flex-row gap-6 p-6 bg-surface-container-lowest shadow-[0_30px_30px_rgba(13,27,42,0.04)] rounded-lg group border-t border-surface-variant md:border-none">
+<div class="w-full md:w-48 h-64 overflow-hidden rounded-lg bg-surface-container">
+<img alt="Hand-loomed Pashmina" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A luxurious, folded Hand-loomed Pashmina shawl showcasing intricate weave patterns in a soft cream and light gold colorway. The lighting is high-key and airy, highlighting the delicate fibers and soft texture of the garment. The scene is set in a high-end boutique environment with a clean, minimalist aesthetic. The image conveys timeless elegance and the meticulous work of skilled artisans through a palette of soft neutrals and ivory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFKLfA9_lP_TQ1rcxAywd54SwvQ2oVqpMqIYDCFj92zxXmkV9IDiuUCioyMGbHP5sRzZLoh0M-hp1eU0lliwhoep59ObJR5m3Lm9yvSx8kW0AEQdMLrN17FxFYwfw7jONphwJzKAsm6I7DkrnpVscHxtksfd61dP8D_RB-_9LXsckyAYq2Ak0_OTMmooPpeXpufMJrI5iD0Hhoy3DadrhiToROTGn61LeW2vg2wy0ItvmpMc1umVcoRJif4MnBSPk1CIFidpoLgDD5"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-on-secondary-container bg-secondary-container px-2 py-1 rounded-full mb-2 inline-block">Heritage</span>
+<span class="font-headline-md text-headline-md text-primary">$850.00</span>
+</div>
+<h2 class="font-display-xl text-headline-md text-primary mb-1">Hand-loomed Pashmina</h2>
+<p class="font-body-md text-on-surface-variant text-sm">100% Grade A Cashmere from the Changthangi goat.</p>
+<div class="mt-4 flex space-x-6 text-sm text-outline">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface">Color</span>
+<span class="text-on-surface font-medium">Ivory Gold</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface">Quantity</span>
+<div class="flex items-center space-x-2 mt-1">
+<button class="w-6 h-6 border border-outline flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">1</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-start">
+<button class="flex items-center space-x-2 text-error hover:underline transition-all">
+<span class="material-symbols-outlined text-sm">delete</span>
+<span class="font-label-caps text-xs">Remove</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 3: Festive Collection -->
+<div class="flex flex-col md:flex-row gap-6 p-6 bg-surface-container-lowest shadow-[0_30px_30px_rgba(13,27,42,0.04)] rounded-lg group border-t border-surface-variant md:border-none">
+<div class="w-full md:w-48 h-64 overflow-hidden rounded-lg bg-surface-container">
+<img alt="Premium Velvet Lehenga" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A macro detail shot of a Premium Velvet Lehenga in deep navy blue, featuring heavy gold zardozi embroidery. The rich texture of the velvet catches the light, creating a high-contrast 'midnight and starlight' effect. The embroidery consists of intricate floral motifs in metallic gold thread. The mood is opulent and exclusive, set against a dark, moody background that emphasizes the luxury of the garment's craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIlg_nPo1EjahCxCFMwit7_NWNrPs2ZP_lu259gtR5MJ4d-_x6GgLZL8ad7rJFbKxdPTgYqw_wX5Fx-l5gXAtktM087ECxIdedFFnYFpTomKeE6ZOnBf190IJR7zkr9pte0EIwoo6n7oC1MJMzjbFhZTavF-boZ--EOCx_4qV_rN-nUEg2o3MSPHJLU_1XfANCMyCLAeI4SNyiNulMk6ENxRbd6RetOissrPpYAphnmv9gGASi8NDRbEwazH54xhTL9wUwyCYvvwWj"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-on-secondary-container bg-secondary-container px-2 py-1 rounded-full mb-2 inline-block">Festive</span>
+<span class="font-headline-md text-headline-md text-primary">$1,200.00</span>
+</div>
+<h2 class="font-display-xl text-headline-md text-primary mb-1">Premium Velvet Lehenga</h2>
+<p class="font-body-md text-on-surface-variant text-sm">Navy silk velvet with 24k gold plated hand embroidery.</p>
+<div class="mt-4 flex space-x-6 text-sm text-outline">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface">Size</span>
+<span class="text-on-surface font-medium">M / Tailored</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface">Quantity</span>
+<div class="flex items-center space-x-2 mt-1">
+<button class="w-6 h-6 border border-outline flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">1</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-start">
+<button class="flex items-center space-x-2 text-error hover:underline transition-all">
+<span class="material-symbols-outlined text-sm">delete</span>
+<span class="font-label-caps text-xs">Remove</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary Panel -->
+<aside class="lg:col-span-4 sticky top-32">
+<div class="bg-surface-container-low p-8 border border-surface-variant">
+<h3 class="font-headline-md text-headline-md text-primary mb-8">Order Summary</h3>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Subtotal</span>
+<span class="text-primary font-medium">$2,290.00</span>
+</div>
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Shipping</span>
+<span class="text-secondary font-medium uppercase tracking-widest text-sm">Free</span>
+</div>
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Tax</span>
+<span class="text-primary font-medium">$0.00</span>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-6 mb-8 flex justify-between items-center">
+<span class="font-headline-md text-headline-md">Total</span>
+<span class="font-headline-md text-headline-md text-primary">$2,290.00</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 px-8 font-label-caps text-sm tracking-widest transition-all hover:bg-primary-container active:scale-95 group relative border-b-2 border-transparent hover:border-secondary-fixed">
+                        PROCEED TO CHECKOUT
+                    </button>
+<div class="mt-8 flex items-center justify-center space-x-4 opacity-50">
+<span class="material-symbols-outlined text-xl">encrypted</span>
+<span class="font-label-caps text-[10px]">Secure Encrypted Checkout</span>
+</div>
+<div class="mt-12 bg-white p-4 border-l-4 border-secondary-fixed">
+<p class="font-body-md text-xs italic text-on-surface-variant">
+                            "Each AuraFit piece is crafted to order by master artisans. Please allow 14 days for shipping of Heritage and Festive collections."
+                        </p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-slate-950 full-width w-full py-12 px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center border-t border-slate-200 dark:border-slate-800">
+<div class="space-y-4">
+<div class="font-serif text-lg text-slate-900 dark:text-slate-100">AuraFit Global Heritage</div>
+<p class="font-serif italic text-sm text-slate-600 dark:text-slate-400">© 2024 AuraFit Global Heritage. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap gap-6 md:justify-end">
+<a class="font-serif italic text-sm text-slate-600 dark:text-slate-400 hover:underline decoration-amber-500 underline-offset-4 transition-all duration-300" href="home.html">Sustainability</a>
+<a class="font-serif italic text-sm text-slate-600 dark:text-slate-400 hover:underline decoration-amber-500 underline-offset-4 transition-all duration-300" href="home.html">Artisan Stories</a>
+<a class="font-serif italic text-sm text-slate-600 dark:text-slate-400 hover:underline decoration-amber-500 underline-offset-4 transition-all duration-300" href="home.html">Shipping</a>
+<a class="font-serif italic text-sm text-slate-600 dark:text-slate-400 hover:underline decoration-amber-500 underline-offset-4 transition-all duration-300" href="home.html">Terms</a>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile only) -->
+<div class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-3 px-4 pb-safe bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_0_rgba(13,27,42,0.04)] z-50 rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-600 hover:text-slate-600 dark:hover:text-slate-300 transition-all active:scale-90" href="home.html">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-sans text-[10px] font-bold uppercase tracking-widest mt-1">Bazaar</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-600 hover:text-slate-600 dark:hover:text-slate-300 transition-all active:scale-90" href="home.html">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-sans text-[10px] font-bold uppercase tracking-widest mt-1">Curated</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-900 dark:text-amber-500 relative after:content-[''] after:absolute after:-bottom-1 after:w-1 after:h-1 after:bg-amber-500 after:rounded-full transition-all active:scale-90" href="home.html">
+<span class="material-symbols-outlined" data-icon="shopping_bag" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<span class="font-sans text-[10px] font-bold uppercase tracking-widest mt-1">Bag</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-600 hover:text-slate-600 dark:hover:text-slate-300 transition-all active:scale-90" href="home.html">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-sans text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</a>
+</div>
+</body></html>
+

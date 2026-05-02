@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AuraFit | Festive Celebrations Community Store</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .serif-heading { font-family: 'Noto Serif', serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#755b00",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#e4e2df",
+                        "secondary-fixed-dim": "#e6c364",
+                        "on-primary-fixed-variant": "#3a4859",
+                        "on-background": "#1a1c1c",
+                        "outline-variant": "#c4c6cc",
+                        "on-tertiary-container": "#848481",
+                        "on-secondary-fixed": "#241a00",
+                        "tertiary-fixed-dim": "#c8c6c4",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#eeeeee",
+                        "primary": "#000000",
+                        "on-tertiary-fixed-variant": "#474745",
+                        "on-surface-variant": "#44474c",
+                        "on-secondary-container": "#785d00",
+                        "surface-container-low": "#f3f3f4",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-fixed": "#ffe08f",
+                        "on-surface": "#1a1c1c",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-secondary-fixed-variant": "#584400",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#d6e4f9",
+                        "on-tertiary-fixed": "#1b1c1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#0f1c2c",
+                        "on-primary-container": "#778598",
+                        "inverse-surface": "#2f3131",
+                        "secondary-container": "#fed977",
+                        "outline": "#74777d",
+                        "background": "#f9f9f9",
+                        "tertiary-container": "#1b1c1a",
+                        "inverse-primary": "#bac8dc",
+                        "surface-tint": "#525f71",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#000000",
+                        "error": "#ba1a1a",
+                        "primary-container": "#0f1c2c",
+                        "primary-fixed-dim": "#bac8dc",
+                        "surface-dim": "#dadada",
+                        "surface": "#f9f9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "grid-margin": "64px",
+                        "lg": "48px",
+                        "grid-gutter": "24px",
+                        "base": "8px",
+                        "xl": "80px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Inter"],
+                        "headline-md": ["Noto Serif"],
+                        "display-lg": ["Noto Serif"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Noto Serif"],
+                        "display-md": ["Noto Serif"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["22px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["28px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "display-md": ["36px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- ANNOUNCEMENT BAR -->
+<div class="w-full bg-primary-container py-3 text-center">
+<p class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest">
+            ✨ COMPLIMENTARY SHIPPING ON ORDERS OVER $150 | DISCOVER THE LUXE COLLECTION ✨
+        </p>
+</div>
+<!-- MAIN NAVBAR (TopAppBar) -->
+<header class="fixed top-[42px] w-full z-50 border-b border-outline-variant bg-surface/95 backdrop-blur-md">
+<div class="flex justify-between items-center px-16 py-4 w-full">
+<!-- Brand Logo -->
+<div class="flex-shrink-0">
+<a class="font-display-md text-2xl font-bold tracking-widest text-on-surface" href="home.html">AuraFit</a>
+</div>
+<!-- Search Bar -->
+<div class="hidden md:flex flex-1 max-w-md mx-12">
+<div class="relative w-full group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface/40 text-sm">search</span>
+<input class="w-full bg-white/50 border-none border-b border-on-surface/10 focus:ring-0 focus:border-secondary pl-10 py-2 text-xs font-label-sm uppercase tracking-wider" placeholder="Search the collection..." type="text"/>
+</div>
+</div>
+<!-- Navigation Actions -->
+<div class="flex items-center gap-6">
+<a class="font-label-sm uppercase tracking-widest text-on-surface/80 hover:text-secondary transition-colors" href="home.html">Bazaar</a>
+<a class="hidden lg:block font-label-sm uppercase tracking-widest text-on-surface/80 hover:text-secondary transition-colors" href="home.html">Home</a>
+<div class="flex items-center gap-6 ml-4">
+<span class="material-symbols-outlined text-on-surface cursor-pointer hover:text-secondary transition-colors" data-icon="person">person</span>
+<span class="material-symbols-outlined text-on-surface cursor-pointer hover:text-secondary transition-colors" data-icon="favorite">favorite</span>
+<a class="relative" href="home.html">
+<span class="material-symbols-outlined text-on-surface cursor-pointer hover:text-secondary transition-colors" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-secondary text-on-secondary text-[10px] font-bold px-1 rounded-full">2</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- SPACER FOR FIXED HEADER -->
+<div class="h-[106px]"></div>
+<!-- BREADCRUMBS & SECONDARY NAV -->
+<nav class="bg-surface border-b border-outline-variant px-16 py-3">
+<div class="flex items-center text-[10px] font-label-sm text-on-surface/50 uppercase tracking-widest mb-2">
+<a class="hover:text-secondary transition-colors" href="home.html">Home</a>
+<span class="mx-2 text-secondary">/</span>
+<span class="text-on-surface">Festive Celebrations</span>
+</div>
+<div class="flex items-center gap-8 py-2 overflow-x-auto no-scrollbar">
+<a class="text-xs font-label-sm uppercase tracking-widest text-on-surface/80 hover:text-secondary transition-colors whitespace-nowrap" href="home.html">Bazaar</a>
+<a class="text-xs font-label-sm uppercase tracking-widest text-secondary border-b border-secondary pb-1 transition-colors whitespace-nowrap font-semibold" href="hindu.html">Festive</a>
+<a class="text-xs font-label-sm uppercase tracking-widest text-on-surface/80 hover:text-secondary transition-colors whitespace-nowrap" href="muslim.html">Modest</a>
+<a class="text-xs font-label-sm uppercase tracking-widest text-on-surface/80 hover:text-secondary transition-colors whitespace-nowrap" href="buddhist.html">Zen</a>
+<a class="text-xs font-label-sm uppercase tracking-widest text-on-surface/80 hover:text-secondary transition-colors whitespace-nowrap" href="sikh.html">Heritage</a>
+<a class="text-xs font-label-sm uppercase tracking-widest text-on-surface/80 hover:text-secondary transition-colors whitespace-nowrap" href="christian.html">Sunday</a>
+<a class="text-xs font-label-sm uppercase tracking-widest text-on-surface/80 hover:text-secondary transition-colors whitespace-nowrap" href="home.html">Virtual Studio</a>
+</div>
+</nav>
+<!-- HERO BANNER -->
+<section class="relative w-full h-[500px] flex items-center overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-[#D94F1C] to-[#8C1B1B] opacity-90"></div>
+<img alt="Festive Background" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay" data-alt="A luxurious cinematic shot of an ornate palace hallway in Rajasthan at sunset. The space is filled with warm, golden light reflecting off polished marble floors. Rich textures of deep red and orange silk drapes frame the scene, creating a regal and traditional Hindu festive atmosphere. The overall mood is sophisticated, opulent, and celebratory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeQpGr83-VvUr-DdFhmvRrS-C-GoVchVJnCKSr6v0ML7NLusLCthaftQoPmw7GZhYHU7QwBl4vlwhr3g6Fks1f5GymS9TN4ZDXOIq2uiqL5o-0HSWSO_BdXJHh4yGeeitbNkjmxeHhRV-0SLAk-3_kx6C0j3wgiM1dP17PT0tUWx4vyRWPldyFITS83alJuvomTa4oJd3GtxQAZ2ilb6PDvSVOORcRn4BQoD9xFc9GITpDkN7OFgoZe10KiI0ztyac63qFQmNF58eI"/>
+<div class="relative z-10 px-16 max-w-4xl">
+<span class="inline-block font-label-sm text-xs tracking-[0.4em] text-white/80 uppercase mb-4">HINDU TRADITIONAL WEAR</span>
+<h2 class="serif-heading text-6xl text-white mb-6 leading-tight">Festive<br/>Celebrations</h2>
+<p class="font-body-lg text-white/90 max-w-lg mb-8 leading-relaxed">
+                Embrace the timeless elegance of tradition. Discover our curated edit of heritage craftsmanship for Diwali, weddings, and sacred gatherings.
+            </p>
+<button class="bg-secondary text-on-secondary font-label-lg px-10 py-4 uppercase tracking-widest hover:bg-white hover:text-on-surface transition-all transform active:scale-95">
+                Explore the Collection
+            </button>
+</div>
+</section>
+<!-- PRODUCT GRID -->
+<section class="py-xl px-16 max-w-[1600px] mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h3 class="font-headline-lg text-on-surface">Latest Arrivals</h3>
+<div class="h-1 w-12 bg-secondary mt-2"></div>
+</div>
+<a class="font-label-sm text-secondary uppercase tracking-widest hover:underline underline-offset-8" href="home.html">View All Products</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-grid-gutter">
+<!-- Product 1 -->
+<div class="group flex flex-col gap-4">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container-low">
+<img alt="Sherwani" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-fashion studio photograph of an embroidered silk sherwani in a deep navy blue with intricate gold thread work on the collar and cuffs. The garment is displayed against a minimal, off-white background with professional studio lighting highlighting the texture of the silk. The aesthetic is clean, premium, and focused on traditional luxury craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfX6GzYNog5G0gieYsfj0oQpX4IrCmSaYoOuxU13tvz3GmvHjp_7DXQ3jisDfmdyhnVtpABH8VFz5PRVUpyYtLPNdDGMwepiT3YzVNPvAaaJl_6NhCxL7BSwkxD2PLoCxUDBUykDEz00NfEg69FbyD3BNC8oXz0hLi7m9GPpWCejGS1Bk2U-7K6ZMSCSd7CAeUgZ8vxIwbT6JvNg462B3ZUl012Al_4SYY3_LZTpCzZtlEKePszLVBNB3t1wwoY2Kn5A0qnlpUmG2x"/>
+<div class="absolute top-4 left-4 bg-error text-on-error text-[10px] font-bold px-2 py-1 uppercase tracking-tighter">25% OFF</div>
+<button class="absolute top-4 right-4 text-white hover:text-error transition-colors drop-shadow-md">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<div class="absolute inset-0 bg-on-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+<span class="text-white font-label-sm tracking-widest uppercase py-2 px-4 border border-white">Quick View</span>
+</div>
+</div>
+<div>
+<p class="text-[10px] font-label-sm uppercase tracking-widest text-on-surface/40 mb-1">Manyavar</p>
+<h4 class="font-label-lg text-on-surface truncate">Embroidered Silk Sherwani</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="font-label-lg text-on-surface">$150.00</span>
+<span class="font-label-sm text-on-surface/30 line-through">$200.00</span>
+</div>
+<div class="flex items-center gap-1 mt-2 text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[11px] font-bold text-on-surface">4.8</span>
+<span class="text-[11px] text-on-surface/40">(124)</span>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group flex flex-col gap-4">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container-low">
+<img alt="Kurta" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvhAW3-qpFGbvQSg97VdjEEX4JbMGtXJxxIALrDpuKtWmNf9tUGTHNr6cCRT1fG_Z1uXrTb4jYzFtPKlI4lxkQSL4y7w-j9-Pz8mOMJ0hmUVd_Yc6WTyj_DjxfXM3ctLu2tEYt09oDHT22CGfF5fcR4qym589lm7DWvAR3GGWMGJylRHs2ociGQCm8m2F1-ZlWZi8dfRfHA-8ps2awtcleG7iC96BkM5DzYtzIBUTOOVNcEuf4N8RcDqmPAVOBQi7GT3PhKleAD0z_"/>
+<div class="absolute top-4 left-4 bg-error text-on-error text-[10px] font-bold px-2 py-1 uppercase tracking-tighter">25% OFF</div>
+<button class="absolute top-4 right-4 text-on-surface hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div>
+<p class="text-[10px] font-label-sm uppercase tracking-widest text-on-surface/40 mb-1">Fabindia</p>
+<h4 class="font-label-lg text-on-surface truncate">Classic Cotton Kurta</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="font-label-lg text-on-surface">$150.00</span>
+<span class="font-label-sm text-on-surface/30 line-through">$200.00</span>
+</div>
+<div class="flex items-center gap-1 mt-2 text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[11px] font-bold text-on-surface">4.7</span>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group flex flex-col gap-4">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container-low">
+<img alt="Saree" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBCB927DZIQ8B3spYBQmUQePrX1OcjG7KVd6Vcwr3o2Qz1pC79GiSyX1tALCeTPRoO87regx-is4lTSjZwT8vGgmAFX1nvZVvVziKW3J0xx_nJUA0Qgt98Xo6q2yw8p8ooQWtxswNmkmxQOHZd1U_G5DHUdDJkqAFgR31vfTq2VQ4Ms08h0UM3GB-n-kQj1m7GXVX65tx-TTbQnNp5wPrLTN5--ehnSZYl4lpLUmudoZSfPvVoVZrdbyTHyudH1uS6ymjkrbHD4VQy"/>
+<div class="absolute top-4 left-4 bg-error text-on-error text-[10px] font-bold px-2 py-1 uppercase tracking-tighter">25% OFF</div>
+<button class="absolute top-4 right-4 text-on-surface hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div>
+<p class="text-[10px] font-label-sm uppercase tracking-widest text-on-surface/40 mb-1">Nalli</p>
+<h4 class="font-label-lg text-on-surface truncate">Georgette Saree with Blouse</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="font-label-lg text-on-surface">$150.00</span>
+<span class="font-label-sm text-on-surface/30 line-through">$200.00</span>
+</div>
+<div class="flex items-center gap-1 mt-2 text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[11px] font-bold text-on-surface">4.9</span>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group flex flex-col gap-4">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container-low">
+<img alt="Lehenga" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKDDgCJ93imXrJEshTpn4fQI1HKWfLM8h4XSxrkGUFt3BPPwBASXM7eZR6ZQcZd2F0aJghzEUTMmUSbu_r7ejeWlBwAsGlQLaG9oRCi9PTa465-0mxKYoeHQMls5CMbMSDbn23xThfZnCaKjvEWCmb6Vn6qDxu_YPuKTl3tc5PTktKd_t5wZuCH6Rka-AteU5A0acXaZoRyqwcHaVjlqXbFWrvOinFlZw3q8r6oAXHNtuGpHleO9QhD4lYunTPpA6ZsnFCqTvuXuud"/>
+<div class="absolute top-4 left-4 bg-error text-on-error text-[10px] font-bold px-2 py-1 uppercase tracking-tighter">25% OFF</div>
+<button class="absolute top-4 right-4 text-on-surface hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div>
+<p class="text-[10px] font-label-sm uppercase tracking-widest text-on-surface/40 mb-1">Mohey</p>
+<h4 class="font-label-lg text-on-surface truncate">Premium Velvet Lehenga</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="font-label-lg text-on-surface">$150.00</span>
+<span class="font-label-sm text-on-surface/30 line-through">$200.00</span>
+</div>
+<div class="flex items-center gap-1 mt-2 text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[11px] font-bold text-on-surface">4.8</span>
+</div>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="group flex flex-col gap-4">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container-low">
+<img alt="Anarkali" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfmodRU3Uo3hAtu7AyWVa8ggEEaJMkkyf3lcY22Ii4VsqxVR6H9UPKC3s4y-raRgt7eC33N4hMyRO5aQrJSULdd7NwDWiqKSF0oMbJPHprgQoQ2TPm3YggE_5OXegf_LUNbJkYLNqh1nnVFgk8XujX8YiTEdpTn4yEUKmR0oMyR7Y-Xdu4r4ixttGrZhyzqchUksCqrUd04oboh9g2Gm8qGJEDkJaJQJAfPIQdDAQUqSHFIRAbAS3bY4YoBAcmDNLZEMonhv8V6BW2"/>
+<div class="absolute top-4 left-4 bg-error text-on-error text-[10px] font-bold px-2 py-1 uppercase tracking-tighter">25% OFF</div>
+<button class="absolute top-4 right-4 text-on-surface hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div>
+<p class="text-[10px] font-label-sm uppercase tracking-widest text-on-surface/40 mb-1">Biba Luxe</p>
+<h4 class="font-label-lg text-on-surface truncate">Festive Anarkali Suit</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="font-label-lg text-on-surface">$150.00</span>
+<span class="font-label-sm text-on-surface/30 line-through">$200.00</span>
+</div>
+<div class="flex items-center gap-1 mt-2 text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[11px] font-bold text-on-surface">4.6</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- EDITORIAL BANNER -->
+<section class="px-16 pb-xl">
+<div class="bg-primary-container grid grid-cols-1 md:grid-cols-2 min-h-[400px]">
+<div class="relative overflow-hidden group">
+<img alt="The Festive Edit" class="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_dC6wpyQH1RM5273gBgzey9d9UJiWSrHrgIuPN1lsMv-MlJJcEIP2I9mkrAY7yDrfNoGq6YJcEXUpC_OmnYi37XdmXadLwZJ1Zh_gRIdHPZ5h6ESsGc7u1wuIHwbFrfvE4HSWqvIR-084wLCldkbT7G1_SOs6r14nQ4vZmFHq5WrOTIoGNbAGYXtCNB2ys13yQVB68jOkVI9ktN600j7svx_i8gi8qzge_guhMNOqUrvIEBfrL61uMcnss2GvdizCyzlTZQLSbA6H"/>
+<div class="absolute inset-0 border-[12px] border-white/5 pointer-events-none"></div>
+</div>
+<div class="flex flex-col justify-center px-16 py-12">
+<h3 class="serif-heading text-secondary text-5xl mb-6">The Festive Edit</h3>
+<p class="text-white/70 font-body-lg mb-10 leading-relaxed">
+                    Uncover the secrets of artisanal weaving and heritage design. This season's edit celebrates the vibrant spirit of the festivals through a modern lens.
+                </p>
+<div>
+<button class="border border-secondary text-secondary px-10 py-3 uppercase tracking-[0.2em] font-label-sm hover:bg-secondary hover:text-on-secondary transition-all">
+                        Explore Edit
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- FITTING ROOM STUDIO -->
+<section class="px-16 pb-xl max-w-[1400px] mx-auto">
+<div class="text-center mb-12">
+<h3 class="serif-heading text-3xl text-on-surface">The Fitting Room Studio</h3>
+<p class="font-body-md text-on-surface/60 mt-2">Experience luxury tailoring through AI-driven visualization.</p>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant flex flex-col md:flex-row min-h-[500px] shadow-sm">
+<!-- Left: Inputs -->
+<div class="w-full md:w-5/12 p-12 border-r border-outline-variant flex flex-col justify-between">
+<div class="space-y-8">
+<div class="space-y-4">
+<label class="block font-label-sm uppercase tracking-widest text-on-surface/60 text-[10px]">1. Your Profile</label>
+<div class="border-2 border-dashed border-secondary/30 p-6 flex flex-col items-center justify-center gap-3 bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="upload">upload</span>
+<span class="text-[10px] font-label-sm uppercase tracking-wider">Upload Reference Photo</span>
+</div>
+</div>
+<div class="space-y-4">
+<label class="block font-label-sm uppercase tracking-widest text-on-surface/60 text-[10px]">2. Selected Garment</label>
+<div class="flex items-center gap-4 p-3 bg-surface-container-low">
+<div class="w-16 h-16 bg-white overflow-hidden">
+<img alt="Selected" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfNGh4CwqTqpZrbgWSsbvZHAatALh8a1Gmx6AlbHQsy8OSpF7RjMYA8EboXGBAg_ojZpnB_UpBwwuvA_LDeHDc7bTYs3Le4je36jdsJC4x-iXsHz76d6hZT-j5sstYrhTAfNauhMSm7u4WHSDm357ZimuCj-QHQhPFZSRkHKV-PbSsIoe2VBOqCFSYjOKUx2M2cBRvBzTJnZDHkhuTLXMbbwNuaSDQ0NDmFAJyjbolwM89A8tT75fVw7eukQ-wORwpS7f6hOcReKwH"/>
+</div>
+<div>
+<p class="text-[11px] font-bold uppercase tracking-wider">Manyavar Sherwani</p>
+<p class="text-[10px] text-on-surface/50">SKU: AF-2024-ETH</p>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<label class="block font-label-sm uppercase tracking-widest text-on-surface/60 text-[10px]">3. Height Details</label>
+<div class="flex items-center border-b border-on-surface/10 py-2">
+<input class="w-full border-none focus:ring-0 font-display-md text-2xl p-0 bg-transparent" type="text" value="170"/>
+<span class="font-label-sm uppercase text-secondary">CM</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary-container text-on-primary py-4 font-label-lg uppercase tracking-widest hover:bg-secondary hover:text-on-secondary transition-all mt-12 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome">auto_awesome</span>
+                    GENERATE AI FITTING
+                </button>
+</div>
+<!-- Right: Display -->
+<div class="w-full md:w-7/12 bg-surface-container-low/30 flex items-center justify-center p-12">
+<div class="text-center space-y-4 opacity-40">
+<span class="material-symbols-outlined text-6xl text-secondary/50" data-icon="sparkles" style="font-variation-settings: 'wght' 200;">colors_spark</span>
+<h4 class="font-display-md text-2xl">Awaiting Magic</h4>
+<p class="font-body-md max-w-xs mx-auto">Upload your profile and select a garment to see the virtual try-on.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- RECOMMENDED FOR YOU -->
+<section class="px-16 pb-xl max-w-[1600px] mx-auto" id="recommended-section" style="display: none;">
+    <div class="mb-12 border-t border-outline-variant pt-12 flex justify-between items-end">
+        <div>
+            <h3 class="serif-heading text-3xl text-on-surface">Curated For You</h3>
+            <p class="font-body-md text-on-surface/60 mt-2">AI-driven recommendations based on your community and preferences.</p>
+        </div>
+    </div>
+    <div id="recommendations-grid" class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Products will be injected here -->
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-primary-container pt-xl pb-12 border-t border-secondary/20">
+<div class="max-w-[1600px] mx-auto px-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<!-- Brand Info -->
+<div class="space-y-6">
+<h4 class="serif-heading text-2xl font-bold text-secondary">AuraFit</h4>
+<p class="font-body-md text-xs text-white/60 tracking-widest uppercase leading-relaxed">
+                        Curating heritage luxury for the modern festive spirit. Crafted for tradition, worn with pride.
+                    </p>
+<div class="flex gap-4">
+<span class="w-8 h-8 rounded-full border border-secondary/30 flex items-center justify-center text-secondary cursor-pointer hover:bg-secondary hover:text-on-secondary transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="facebook">social_leaderboard</span>
+</span>
+<span class="w-8 h-8 rounded-full border border-secondary/30 flex items-center justify-center text-secondary cursor-pointer hover:bg-secondary hover:text-on-secondary transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="photo_camera">photo_camera</span>
+</span>
+</div>
+</div>
+<!-- Column 1 -->
+<div>
+<h5 class="text-secondary font-label-sm uppercase tracking-[0.2em] mb-8">Community Stores</h5>
+<ul class="space-y-4">
+<li><a class="text-[10px] font-label-sm uppercase tracking-widest text-white/60 hover:text-secondary transition-all" href="hindu.html">Festive</a></li>
+<li><a class="text-[10px] font-label-sm uppercase tracking-widest text-white/60 hover:text-secondary transition-all" href="muslim.html">Modest Elegance</a></li>
+<li><a class="text-[10px] font-label-sm uppercase tracking-widest text-white/60 hover:text-secondary transition-all" href="buddhist.html">Zen &amp; Harmony</a></li>
+<li><a class="text-[10px] font-label-sm uppercase tracking-widest text-white/60 hover:text-secondary transition-all" href="sikh.html">Heritage Legacy</a></li>
+<li><a class="text-[10px] font-label-sm uppercase tracking-widest text-white/60 hover:text-secondary transition-all" href="christian.html">Sunday Grace</a></li>
+</ul>
+</div>
+<!-- Column 2 -->
+<div>
+<h5 class="text-secondary font-label-sm uppercase tracking-[0.2em] mb-8">Concierge</h5>
+<ul class="space-y-4">
+<li><a class="text-[10px] font-label-sm uppercase tracking-widest text-white/60 hover:text-secondary transition-all" href="home.html">Personal Styling</a></li>
+<li><a class="text-[10px] font-label-sm uppercase tracking-widest text-white/60 hover:text-secondary transition-all" href="home.html">Garment Care</a></li>
+<li><a class="text-[10px] font-label-sm uppercase tracking-widest text-white/60 hover:text-secondary transition-all" href="home.html">Shipping &amp; Returns</a></li>
+<li><a class="text-[10px] font-label-sm uppercase tracking-widest text-white/60 hover:text-secondary transition-all" href="home.html">Gift Cards</a></li>
+</ul>
+</div>
+<!-- Column 3 -->
+<div>
+<h5 class="text-secondary font-label-sm uppercase tracking-[0.2em] mb-8">Experience More</h5>
+<ul class="space-y-4">
+<li><a class="text-[10px] font-label-sm uppercase tracking-widest text-white/60 hover:text-secondary transition-all" href="sikh.html">The Heritage Blog</a></li>
+<li><a class="text-[10px] font-label-sm uppercase tracking-widest text-white/60 hover:text-secondary transition-all" href="home.html">Our Artisans</a></li>
+<li><a class="text-[10px] font-label-sm uppercase tracking-widest text-white/60 hover:text-secondary transition-all" href="home.html">Sustainability</a></li>
+<li><a class="text-[10px] font-label-sm uppercase tracking-widest text-white/60 hover:text-secondary transition-all" href="home.html">Careers</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-12 border-t border-secondary/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-body-md text-[10px] text-white/40 tracking-widest uppercase">
+                    © 2024 AuraFit Heritage Luxury. Crafted for Tradition.
+                </p>
+<div class="flex gap-8">
+<a class="text-[10px] font-label-sm uppercase tracking-widest text-white/40 hover:text-secondary" href="home.html">Privacy Policy</a>
+<a class="text-[10px] font-label-sm uppercase tracking-widest text-white/40 hover:text-secondary" href="home.html">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+    // Determine community from URL (for recommender later)
+    const path = window.location.pathname.toLowerCase();
+    let currentCommunity = "Hindu";
+    if (path.includes("muslim")) currentCommunity = "Muslim";
+    if (path.includes("sikh")) currentCommunity = "Sikh";
+    if (path.includes("buddhist")) currentCommunity = "Buddhist";
+    if (path.includes("christian")) currentCommunity = "Christian";
+
+    // --- TRY-ON LOGIC ---
+    // 1. Create hidden file inputs
+    const userImgInput = document.createElement('input');
+    userImgInput.type = 'file';
+    userImgInput.accept = 'image/*';
+    
+    const garmentImgInput = document.createElement('input');
+    garmentImgInput.type = 'file';
+    garmentImgInput.accept = 'image/*';
+
+    // 2. Identify UI elements precisely using the labels
+    const labels = Array.from(document.querySelectorAll('label'));
+    const profileLabel = labels.find(l => l.innerText.toLowerCase().includes('your profile') || l.innerText.toLowerCase().includes('1.'));
+    const garmentLabel = labels.find(l => l.innerText.toLowerCase().includes('garment') || l.innerText.toLowerCase().includes('2.'));
+    
+    let userZone = profileLabel ? profileLabel.nextElementSibling : null;
+    let garmentZone = garmentLabel ? garmentLabel.nextElementSibling : null;
+    
+    const generateBtn = Array.from(document.querySelectorAll('button')).find(b => b.innerText && b.innerText.toUpperCase().includes('GENERATE AI FITTING'));
+    
+    // Result area is the big display section on the right
+    const resultArea = Array.from(document.querySelectorAll('div')).find(d => d.innerText && d.innerText.includes('Awaiting Magic'));
+    const containerToUpdate = resultArea ? resultArea.parentElement : null;
+    
+    const heightInput = document.querySelector('input[type="number"]') || document.querySelector('input[value="170"]');
+
+    // Save initial state for reset
+    const initialUserZoneHTML = userZone ? userZone.innerHTML : '';
+    const initialGarmentZoneHTML = garmentZone ? garmentZone.innerHTML : '';
+    const initialResultHTML = containerToUpdate ? containerToUpdate.innerHTML : '';
+
+    if (!userZone || !garmentZone || !generateBtn || !containerToUpdate) {
+        console.error('Could not find upload zones or generate button!', {userZone, garmentZone, generateBtn, containerToUpdate});
+    }
+
+    const previewImg = (file, zone) => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            let img = zone.querySelector('img');
+            if (img) {
+                img.src = e.target.result;
+            } else {
+                zone.innerHTML = `<img src="${e.target.result}" class="w-full h-full object-contain rounded-lg" style="max-height: 150px; object-fit: contain;" />`;
+            }
+        };
+        reader.readAsDataURL(file);
+    };
+
+    // 3. Attach Events
+    if (userZone) {
+        userZone.style.cursor = 'pointer';
+        userZone.addEventListener('click', (e) => { e.stopPropagation(); userImgInput.click(); });
+    }
+    if (garmentZone) {
+        garmentZone.style.cursor = 'pointer';
+        garmentZone.addEventListener('click', (e) => { e.stopPropagation(); garmentImgInput.click(); });
+    }
+
+    userImgInput.onchange = () => userImgInput.files[0] && previewImg(userImgInput.files[0], userZone);
+    garmentImgInput.onchange = () => garmentImgInput.files[0] && previewImg(garmentImgInput.files[0], garmentZone);
+
+    // Provide a global reset function
+    window.resetTryOn = () => {
+        userImgInput.value = '';
+        garmentImgInput.value = '';
+        if (userZone) userZone.innerHTML = initialUserZoneHTML;
+        if (garmentZone) garmentZone.innerHTML = initialGarmentZoneHTML;
+        if (containerToUpdate) containerToUpdate.innerHTML = initialResultHTML;
+    };
+
+    generateBtn?.addEventListener('click', async () => {
+        if (!userImgInput.files[0] || !garmentImgInput.files[0]) {
+            alert('Please upload both your photo and a garment photo first!');
+            return;
+        }
+
+        const originalText = generateBtn.innerText;
+        generateBtn.innerText = 'GENERATING...';
+        generateBtn.disabled = true;
+        generateBtn.style.opacity = '0.7';
+
+        const tryonData = new FormData();
+        tryonData.append('person_image', userImgInput.files[0]);
+        tryonData.append('garment_image', garmentImgInput.files[0]);
+        
+        const measData = new FormData();
+        measData.append('person_image', userImgInput.files[0]);
+        measData.append('user_height', heightInput?.value || 170);
+
+        try {
+            const [tryonRes, measRes] = await Promise.all([
+                fetch('http://localhost:8000/tryon', { method: 'POST', body: tryonData }),
+                fetch('http://localhost:8000/measurements', { method: 'POST', body: measData })
+            ]);
+
+            if (tryonRes.ok) {
+                const blob = await tryonRes.blob();
+                const url = URL.createObjectURL(blob);
+                
+                let measurementsHtml = '';
+                if (measRes.ok) {
+                    const meas = await measRes.json();
+                    measurementsHtml = `
+                        <div class="mt-6 bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded-lg p-4 w-full max-w-sm">
+                            <h5 class="text-[#C9A84C] font-bold text-center mb-3 uppercase tracking-widest text-xs">AI Measurements</h5>
+                            <div class="grid grid-cols-2 gap-y-2 text-xs text-on-surface">
+                                <div class="text-on-surface/60">Shoulder:</div>
+                                <div class="font-semibold text-right">${meas.shoulder_width || 'N/A'}</div>
+                                <div class="text-on-surface/60">Chest/Torso:</div>
+                                <div class="font-semibold text-right">${meas.torso_length || 'N/A'}</div>
+                                <div class="text-on-surface/60">Hips:</div>
+                                <div class="font-semibold text-right">${meas.hip_width || 'N/A'}</div>
+                            </div>
+                            <div class="mt-3 pt-3 border-t border-[#C9A84C]/20 flex justify-between items-center">
+                                <span class="text-on-surface/60 text-xs">Recommended Size:</span>
+                                <span class="bg-[#C9A84C] text-white font-bold px-3 py-1 rounded text-sm">${meas.recommended_size || 'M'}</span>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                if (containerToUpdate) {
+                    containerToUpdate.innerHTML = `
+                        <div class="relative w-full h-full flex flex-col items-center justify-center p-4 overflow-y-auto">
+                            <img src="${url}" class="max-w-full max-h-[450px] object-contain rounded-xl shadow-2xl border-4 border-[#C9A84C]/30" />
+                            <p class="mt-4 text-[#C9A84C] font-bold tracking-widest uppercase text-sm">AI Fitting Ready</p>
+                            ${measurementsHtml}
+                            <button onclick="window.resetTryOn()" class="mt-6 border border-secondary text-secondary px-8 py-3 uppercase tracking-[0.2em] font-label-sm hover:bg-secondary hover:text-on-secondary transition-all flex items-center gap-2">
+                                <span class="material-symbols-outlined text-sm">refresh</span> Try Another Outfit
+                            </button>
+                        </div>
+                    `;
+                }
+            } else {
+                alert('AI Fitting failed. Make sure your backend is running!');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Error connecting to backend at http://localhost:8000');
+        } finally {
+            if(generateBtn) {
+                generateBtn.innerText = originalText;
+                generateBtn.disabled = false;
+                generateBtn.style.opacity = '1';
+            }
+        }
+    });
+
+    // --- RECOMMENDER LOGIC ---
+    try {
+        const response = await fetch('http://localhost:8000/recommend', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                community: currentCommunity,
+                preferred_categories: [],
+                price_range: [0, 1000],
+                past_purchases: [],
+                tags: []
+            })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            const recs = data.recommendations || [];
+            
+            if (recs.length > 0) {
+                const recSection = document.getElementById('recommended-section');
+                if(recSection) recSection.style.display = 'block';
+                const grid = document.getElementById('recommendations-grid');
+                if(grid) {
+                    grid.innerHTML = '';
+                    recs.slice(0, 4).forEach(item => {
+                        grid.innerHTML += `
+                            <div class="group cursor-pointer">
+                                <div class="relative bg-surface-container-low aspect-[3/4] mb-4 overflow-hidden border border-outline-variant/30 flex items-center justify-center p-8">
+                                    <span class="material-symbols-outlined text-6xl text-secondary/20" style="font-variation-settings: 'wght' 200;">apparel</span>
+                                    <div class="absolute inset-0 bg-primary-container/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                                        <button class="border border-secondary text-secondary px-6 py-2 uppercase tracking-[0.2em] font-label-sm hover:bg-secondary hover:text-on-secondary transition-all">
+                                            View Details
+                                        </button>
+                                    </div>
+                                    <div class="absolute top-4 right-4 bg-surface-container-highest/80 backdrop-blur-md px-2 py-1 flex items-center gap-1 border border-outline-variant/50">
+                                        <span class="material-symbols-outlined text-[10px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="text-[10px] font-bold">${item.rating}</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-start gap-4">
+                                    <div>
+                                        <h4 class="font-label-lg uppercase tracking-wider text-on-surface mb-1">${item.name}</h4>
+                                        <p class="font-body-md text-xs text-on-surface/40 uppercase tracking-widest">${item.category}</p>
+                                    </div>
+                                    <span class="font-label-lg text-secondary">$${item.price.toFixed(2)}</span>
+                                </div>
+                                <div class="mt-3 text-[10px] text-secondary/80 bg-secondary/5 inline-block px-2 py-1 rounded border border-secondary/10">
+                                    <span class="material-symbols-outlined text-[10px] align-middle mr-1">auto_awesome</span>
+                                    ${item.explanation.split('|')[0]}
+                                </div>
+                            </div>
+                        `;
+                    });
+                }
+            }
+        }
+    } catch (err) {
+        console.error("Failed to load recommendations:", err);
+    }
+});
+</script>
+</body></html>
+
+
+
+
+
+
+

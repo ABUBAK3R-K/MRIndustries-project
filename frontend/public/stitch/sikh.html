@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "primary-fixed": "#d6e4f9",
+                        "on-primary-fixed-variant": "#3a4859",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e2e2e2",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-container": "#1b1c1a",
+                        "on-tertiary-container": "#848481",
+                        "primary-container": "#0f1c2c",
+                        "surface-container-low": "#f3f3f4",
+                        "primary": "#000000",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#0f1c2c",
+                        "primary-fixed-dim": "#bac8dc",
+                        "surface-dim": "#dadada",
+                        "on-surface": "#1a1c1c",
+                        "on-background": "#1a1c1c",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#1b1c1a",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary": "#000000",
+                        "surface-container": "#eeeeee",
+                        "secondary": "#755b00",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#474745",
+                        "surface-container-highest": "#e2e2e2",
+                        "tertiary-fixed-dim": "#c8c6c4",
+                        "surface": "#f9f9f9",
+                        "secondary-fixed-dim": "#e6c364",
+                        "on-secondary-fixed-variant": "#584400",
+                        "outline": "#74777d",
+                        "secondary-fixed": "#ffe08f",
+                        "background": "#f9f9f9",
+                        "outline-variant": "#c4c6cc",
+                        "inverse-on-surface": "#f0f1f1",
+                        "secondary-container": "#fed977",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-tint": "#525f71",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#bac8dc",
+                        "on-primary-container": "#778598",
+                        "on-surface-variant": "#44474c",
+                        "tertiary-fixed": "#e4e2df",
+                        "on-secondary-container": "#785d00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "grid-margin": "64px",
+                        "lg": "48px",
+                        "grid-gutter": "24px",
+                        "base": "8px",
+                        "xl": "80px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "display-xl": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "label-lg": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                        "headline-md": ["22px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "headline-lg": ["28px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body class="text-on-background font-body-md">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-outline-variant px-grid-margin py-5 bg-surface-container-lowest sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-4 text-primary" href="home.html">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_543)">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_6_543"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-primary font-headline-md tracking-tight">AuraFit Legacy</h2>
+</a>
+<nav class="flex items-center gap-9">
+<a class="text-on-surface font-label-lg hover:text-secondary transition-colors" href="home.html">Bazaar</a>
+<a class="text-on-surface font-label-lg hover:text-secondary transition-colors" href="hindu.html">Festive</a>
+<a class="text-on-surface font-label-lg hover:text-secondary transition-colors" href="muslim.html">Modest</a>
+<a class="text-on-surface font-label-lg hover:text-secondary transition-colors" href="buddhist.html">Zen</a>
+<a class="text-on-surface font-label-lg hover:text-secondary transition-colors" href="sikh.html">Heritage</a>
+<a class="text-on-surface font-label-lg hover:text-secondary transition-colors" href="christian.html">Sunday</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<label class="flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded h-full bg-surface-container border border-outline-variant">
+<div class="text-on-surface-variant flex items-center justify-center pl-4 pr-2" data-icon="search">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full border-none bg-transparent focus:ring-0 text-on-surface placeholder:text-on-surface-variant text-base font-normal" placeholder="Find an heirloom" value=""/>
+</div>
+</label>
+<div class="flex gap-4">
+<a class="flex items-center justify-center p-2 rounded-full hover:bg-surface-container transition-colors relative" href="bag.html">
+<span class="material-symbols-outlined text-primary">shopping_bag</span>
+</a>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-primary">person_outline</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<section class="px-grid-margin py-lg bg-surface">
+<div class="relative overflow-hidden rounded-lg aspect-[21/9] flex flex-col justify-center items-center text-center p-md">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-primary/40 z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A cinematic close-up of intricate antique Indian textiles, featuring deep indigo and rich saffron silk woven with real gold zari threads. The lighting is soft and golden, highlighting the tactile texture and delicate historical embroidery patterns. The aesthetic is one of heritage luxury and ancestral reverence, with a shallow depth of field creating a sophisticated, high-end gallery feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4OaT1UDN8SKXyrQ7HvKCPUwQAjvsKxwHzhw6dU-1IYDP8qbjQvLClhVIY3KRNl8gRfOcw7sD1imYoHdWE0x8b9Q_G1F9uZvLHDBDOdnlT3iaUQvZ5zW9G3NbLsbNWZqBqRwMBWTR2XELoOfZJVFME_tiL-BI-hJfXbIF72O_rd93dDV2lTe2LxsMRb0IhNnmn09gzr5aRfEd3vRLyNk5u94TcH0Yt3PVqD-znb1aHGkKau1vTrSOYRtCXNBFo953icxLVoUFSCbps"/>
+</div>
+<div class="relative z-20 max-w-2xl text-on-primary">
+<p class="font-label-lg uppercase tracking-widest mb-4 opacity-90">Established 1922</p>
+<h1 class="font-display-lg mb-6">Timeless Traditions, Woven for Tomorrow</h1>
+<p class="font-body-lg mb-lg opacity-90">Discover ancestral craftsmanship and antique-inspired textiles curated for the modern heirloom collector.</p>
+<div class="flex gap-4 justify-center">
+<button class="bg-primary text-on-primary px-lg py-4 font-label-lg rounded hover:bg-on-primary-fixed-variant transition-all border border-primary uppercase" onclick="location.href='sikh.html'">
+                                    EXPLORE THE ARCHIVE
+                                </button>
+<button class="bg-transparent text-on-primary px-lg py-4 font-label-lg rounded hover:bg-on-primary/10 transition-all border border-on-primary uppercase">
+                                    THE BESPOKE EXPERIENCE
+                                </button>
+</div>
+</div>
+</div>
+</section>
+<section class="px-grid-margin py-xl">
+<div class="flex justify-between items-end mb-lg border-b border-outline-variant pb-base">
+<div>
+<h2 class="font-display-md text-primary">The Legacy Collection</h2>
+<p class="font-body-md text-on-surface-variant">Masterpieces of traditional weaving and metalwork.</p>
+</div>
+<a class="text-secondary font-label-lg underline underline-offset-4 decoration-1" href="sikh.html">View Entire Catalog</a>
+</div>
+<div class="grid grid-cols-4 gap-grid-gutter">
+<div class="group flex flex-col gap-sm">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high border border-outline-variant relative cursor-pointer" onclick="location.href='sikh.html'">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A hand-loomed Pashmina shawl in a deep royal blue, featuring exquisite heritage floral motifs in silver thread. The fabric is draped over a minimalist wooden pedestal in a high-key, white studio setting. Soft, directional light emphasizes the fine weave and luxurious texture of the wool, maintaining a modern minimalist aesthetic with cultural pride." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChAA0d4qrJGzGfzOr5aIVt5LQX9SyxWzmQt57-Heb0XfENIx1fv_4FBI98OQ9FTPVASuxwJrKBr8cSnWtBg_5oFVroYjPPfIXMPzisRh86pQ34jSLB36kRxBBlxhWCP0nCodvCQftc9ucDuB0RLpCNgReAQR1xHus_vTeOpe9XZDuH1WNeKz3zkKaUAYQJRbD9Z3FtdOCvHG-JK3MGgIaTJpVgQOs5UwKvC7T1WNjswJ6eMAfh-jq4XK_1NLW-B2qy0OaRYcAFK8E9"/>
+<div class="absolute top-4 right-4 bg-secondary-container px-3 py-1 rounded-full">
+<span class="text-[10px] font-bold text-on-secondary-container uppercase tracking-tighter">One of One</span>
+</div>
+</div>
+<div class="mt-xs">
+<p class="font-headline-md text-primary">Hand-loomed Pashmina</p>
+<p class="font-label-sm text-on-surface-variant uppercase tracking-wider">Heritage Weave • $1,200</p>
+</div>
+</div>
+<div class="group flex flex-col gap-sm">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high border border-outline-variant cursor-pointer" onclick="location.href='sikh.html'">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Exquisite antique temple gold jewelry, specifically a heavy choker featuring ruby encrustations and traditional peacock motifs. The 22K gold has a matte, aged finish that speaks to its history. The piece is set against a clean, warm cream background with subtle ambient shadows, creating an atmosphere of exclusivity and high-end boutique luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3p0B4OPu27AIvehSoaQ5wn6rb-dEmCwt237aAapq0d3pyPTP4u6JxblmOzrYKyd5OQi3SBoc7wVVhgRMYkS06T5wEIm3O-L2CvBzO75UUlmHNgrYTE_JCc7g3MF-Wmr6xaORFvHYqDrOwTwIfi7T0LOLfjTOHJaUM2JEd3lXwUCm9RqfTPIW0HPDpPtQGZs2Wft2jtCF8QdNbIbSdfUjWqXYsEtmG_0rOS-PoAiuN4QDR12eK5M02CEjlATza-NWv-mb9dfAPe556"/>
+</div>
+<div class="mt-xs">
+<p class="font-headline-md text-primary">Temple Gold Choker</p>
+<p class="font-label-sm text-on-surface-variant uppercase tracking-wider">22K Antique Gold • $4,500</p>
+</div>
+</div>
+<div class="group flex flex-col gap-sm">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high border border-outline-variant cursor-pointer" onclick="location.href='sikh.html'">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A ceremonial men's Sherwani in cream-colored raw silk, adorned with intricate zardosi hand-embroidery in gold and copper. The garment is displayed on a bespoke mannequin in a luxury gallery space with marble floors. The lighting is museum-grade, highlighting the three-dimensional depth of the embroidery and the premium fabric quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV-ReYV0dnky1JDIKdDpmXfconcyTTAdqohLc0n24rIPE6HasspBluyJtuu3EPsz2MsIy54FS0RmCXkHze5Ea4JRuBwMASFcdjIVToALiV2THT6WmGurmIVup9ohUahSvOERAqlss8Vl43VmmxUjOV6309XrOBrueggH25xrMTi1nI-ydZzJOuXXeXV7DptPMLNbPnOd-UG11k7L-AzxqpVg2leAkADTrv-7loWNg67A8Lipsbl5KbH109bVD8XQeF4wyi58KBBcKw"/>
+</div>
+<div class="mt-xs">
+<p class="font-headline-md text-primary">Ceremonial Sherwani</p>
+<p class="font-label-sm text-on-surface-variant uppercase tracking-wider">Hand-embroidered • $2,800</p>
+</div>
+</div>
+<div class="group flex flex-col gap-sm">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high border border-outline-variant cursor-pointer" onclick="location.href='sikh.html'">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A vintage ancestral silk saree in deep emerald green, showcasing traditional Banarasi motifs woven with real silver wire. The saree is artfully folded, revealing the intricate pallu design. The setting is minimalist with a warm, tonal color palette, using soft shadows to create a sense of tactile fabric layers and heritage craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbyc_zE7IIeXkloqwxhJ0uTgNaqiMXZP5hK_vpX_MHMt5gVh8VRBWn0soWNdR4m5TdLLzfAzolnGdpFwAhPon9Pk1evXMRzx6upZVF_Og_tuJfSUNIGrJM376BiahCa_j4lcSui1wHPUUuxOZdl_wop3SW6WCOIuyOVZKybkVJBlwCXNHFzJqERmkaMb-4M1O0_JxM7yFn7N-TBGV7gXnkxji8VClnQ-iwTXPHPtS9J8HiE-uzqn-yafBJg6LnBThbcO0tIaLipFF5"/>
+</div>
+<div class="mt-xs">
+<p class="font-headline-md text-primary">Ancestral Silk Saree</p>
+<p class="font-label-sm text-on-surface-variant uppercase tracking-wider">Vintage Motif • $1,850</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-primary-container text-on-primary py-xl px-grid-margin relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20">
+<img class="w-full h-full object-cover grayscale" data-alt="A high-contrast, black and white artistic close-up of an elderly artisan's hands meticulously weaving fine threads on a traditional wooden loom. The lighting is dramatic and moody, focusing on the texture of the skin and the precision of the ancient technique. This visual reinforces the theme of ancestral craftsmanship and the soul of the artisan community." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6B8Qdlk6exkquZy7gO-y6LGnRbspIJRDYfBGWoXBfZ-6iDAthWi3ERFpy4tWqKO5CbH42tXMwjxpi3Fasp8TFPextRkDhu2vK_9onZj5DKJdLec-oaeniw3XoToqNCpn9Kmuccbpl_9INRexBWKuklbVrxm0jdIkkFLP5Ii-BF_hKNgOZ2sH5QJLBeaP2WT_y80iK0gFZ_6kfkZSy63SPI8n7PstqMPOxYXD_UX6XWZXSk0w5fe9ZILRCKngewOoCo6dG_5-lnZXJ"/>
+</div>
+<div class="max-w-xl relative z-10">
+<h3 class="font-label-lg uppercase tracking-[0.2em] mb-4 text-secondary-fixed">The Legacy Edit</h3>
+<h2 class="font-display-lg mb-6 leading-tight">Artisan Stories: The Hands Behind the Heirloom</h2>
+<p class="font-body-lg mb-lg opacity-80 leading-relaxed">
+                            Every piece in our collection carries the signature of an artisan whose family has guarded these techniques for generations. We don't just sell clothing; we preserve living history.
+                        </p>
+<div class="flex gap-base">
+<div class="w-12 h-[1px] bg-secondary-fixed mt-3"></div>
+<div>
+<p class="font-headline-md italic mb-2">"The thread is our memory, the loom is our voice."</p>
+<p class="font-label-sm text-secondary-fixed uppercase">Master Weaver Ramesh, Banaras</p>
+</div>
+</div>
+<button class="mt-lg border border-on-primary px-lg py-4 font-label-lg rounded hover:bg-on-primary hover:text-primary transition-all uppercase">
+                            READ THE FULL CHRONICLE
+                        </button>
+</div>
+</section>
+<section class="px-grid-margin py-xl flex flex-col items-center">
+<div class="w-full max-w-5xl bg-surface-container-lowest border border-outline-variant p-lg flex gap-xl items-center shadow-[0px_20px_40px_rgba(0,0,0,0.04)]">
+<div class="w-1/2 aspect-square bg-surface-container relative rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A sophisticated digital visualization of a high-end fitting room. A translucent, ethereal holographic overlay shows a traditional silk garment being draped over a minimalist human form. The environment is ultra-modern, featuring clean lines, warm white lighting, and gold accents, perfectly blending advanced technology with timeless luxury fashion heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmFx7v5L0eVcqdk1s9eJCZ5p7m4lVw7d39L1DgQfKCBq46Oke2XhWYIlZA7ZYR37z9bU7lGDOpj51ZyoSP4oweab1OMJHQ6u8z1PfsFtNJ_WcH9xdzXiWj7njjPKMBHjIemrYCovTJuJEWZp3NlOaJ1T-fvAMBvJBnHxdlGUBZpAUnMwPBKge5UUOLPwE5ogAXNb9aBslntt95zh1mvz4540g3ZHkqnRs1sNTrnhNzYz1LqWP2P0T0e92URCKCwTv26cf0Bwcp_0dv"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-md">
+<div class="flex items-center gap-2 text-on-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-lg">AI Visualization Active</span>
+</div>
+</div>
+</div>
+<div class="w-1/2">
+<h2 class="font-display-md text-primary mb-md">Heritage Fitting Room</h2>
+<p class="font-body-md text-on-surface-variant mb-lg leading-relaxed">
+                                Experience ancestral wear through a modern lens. Our AI-driven visualization tool allows you to see how different draping styles and heirlooms complement your profile before they are commissioned.
+                            </p>
+<ul class="flex flex-col gap-sm mb-lg">
+<li class="flex items-center gap-3 font-label-lg text-primary">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+                                    Drape Visualization (15+ styles)
+                                </li>
+<li class="flex items-center gap-3 font-label-lg text-primary">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+                                    Accurate Fabric Weight Simulation
+                                </li>
+<li class="flex items-center gap-3 font-label-lg text-primary">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+                                    Ancestral Jewelry Pairing
+                                </li>
+</ul>
+<button class="w-full bg-primary text-on-primary py-4 font-label-lg rounded hover:bg-secondary transition-all uppercase">
+                                ENTER FITTING ROOM
+                            </button>
+</div>
+</div>
+</section>
+<section class="px-grid-margin py-lg border-t border-outline-variant">
+<div class="flex justify-between items-start">
+<div class="max-w-xs">
+<div class="flex items-center gap-2 mb-4">
+<div class="size-5 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z"></path>
+</svg>
+</div>
+<span class="font-headline-md">AuraFit Legacy</span>
+</div>
+<p class="font-body-md text-on-surface-variant">Bridging the gap between ancient tradition and modern sophistication since 1922.</p>
+</div>
+<div class="grid grid-cols-3 gap-xl">
+<div class="flex flex-col gap-4">
+<h4 class="font-label-lg uppercase text-primary">Curation</h4>
+<a class="font-body-md text-on-surface-variant hover:text-secondary" href="hindu.html">Festive Edit</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary" href="home.html">Wedding Registry</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary" href="sikh.html">Archive Pieces</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-lg uppercase text-primary">Community</h4>
+<a class="font-body-md text-on-surface-variant hover:text-secondary" href="home.html">Artisan Grants</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary" href="home.html">Cultural Journal</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary" href="home.html">Private Viewings</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-lg uppercase text-primary">Inquiry</h4>
+<a class="font-body-md text-on-surface-variant hover:text-secondary" href="home.html">Bespoke Orders</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary" href="sikh.html">Heritage Care</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary" href="home.html">Concierge</a>
+</div>
+</div>
+</div>
+<div class="mt-xl pt-base border-t border-outline-variant flex justify-between items-center">
+<p class="font-label-sm text-on-surface-variant">© 2024 AuraFit Legacy. All Rights Reserved.</p>
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-primary cursor-pointer">public</span>
+<span class="material-symbols-outlined text-primary cursor-pointer">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer">history_edu</span>
+</div>
+</div>
+</section>
+</main>
+</div>
+</div>
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+    // Determine community from URL (for recommender later)
+    const path = window.location.pathname.toLowerCase();
+    let currentCommunity = "Hindu";
+    if (path.includes("muslim")) currentCommunity = "Muslim";
+    if (path.includes("sikh")) currentCommunity = "Sikh";
+    if (path.includes("buddhist")) currentCommunity = "Buddhist";
+    if (path.includes("christian")) currentCommunity = "Christian";
+
+    // --- TRY-ON LOGIC ---
+    // 1. Create hidden file inputs
+    const userImgInput = document.createElement('input');
+    userImgInput.type = 'file';
+    userImgInput.accept = 'image/*';
+    
+    const garmentImgInput = document.createElement('input');
+    garmentImgInput.type = 'file';
+    garmentImgInput.accept = 'image/*';
+
+    // 2. Identify UI elements precisely using the labels
+    const labels = Array.from(document.querySelectorAll('label'));
+    const profileLabel = labels.find(l => l.innerText.toLowerCase().includes('your profile') || l.innerText.toLowerCase().includes('1.'));
+    const garmentLabel = labels.find(l => l.innerText.toLowerCase().includes('garment') || l.innerText.toLowerCase().includes('2.'));
+    
+    let userZone = profileLabel ? profileLabel.nextElementSibling : null;
+    let garmentZone = garmentLabel ? garmentLabel.nextElementSibling : null;
+    
+    const generateBtn = Array.from(document.querySelectorAll('button')).find(b => b.innerText && b.innerText.toUpperCase().includes('GENERATE AI FITTING'));
+    
+    // Result area is the big display section on the right
+    const resultArea = Array.from(document.querySelectorAll('div')).find(d => d.innerText && d.innerText.includes('Awaiting Magic'));
+    const containerToUpdate = resultArea ? resultArea.parentElement : null;
+    
+    const heightInput = document.querySelector('input[type="number"]') || document.querySelector('input[value="170"]');
+
+    // Save initial state for reset
+    const initialUserZoneHTML = userZone ? userZone.innerHTML : '';
+    const initialGarmentZoneHTML = garmentZone ? garmentZone.innerHTML : '';
+    const initialResultHTML = containerToUpdate ? containerToUpdate.innerHTML : '';
+
+    if (!userZone || !garmentZone || !generateBtn || !containerToUpdate) {
+        console.error('Could not find upload zones or generate button!', {userZone, garmentZone, generateBtn, containerToUpdate});
+    }
+
+    const previewImg = (file, zone) => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            let img = zone.querySelector('img');
+            if (img) {
+                img.src = e.target.result;
+            } else {
+                zone.innerHTML = `<img src="${e.target.result}" class="w-full h-full object-contain rounded-lg" style="max-height: 150px; object-fit: contain;" />`;
+            }
+        };
+        reader.readAsDataURL(file);
+    };
+
+    // 3. Attach Events
+    if (userZone) {
+        userZone.style.cursor = 'pointer';
+        userZone.addEventListener('click', (e) => { e.stopPropagation(); userImgInput.click(); });
+    }
+    if (garmentZone) {
+        garmentZone.style.cursor = 'pointer';
+        garmentZone.addEventListener('click', (e) => { e.stopPropagation(); garmentImgInput.click(); });
+    }
+
+    userImgInput.onchange = () => userImgInput.files[0] && previewImg(userImgInput.files[0], userZone);
+    garmentImgInput.onchange = () => garmentImgInput.files[0] && previewImg(garmentImgInput.files[0], garmentZone);
+
+    // Provide a global reset function
+    window.resetTryOn = () => {
+        userImgInput.value = '';
+        garmentImgInput.value = '';
+        if (userZone) userZone.innerHTML = initialUserZoneHTML;
+        if (garmentZone) garmentZone.innerHTML = initialGarmentZoneHTML;
+        if (containerToUpdate) containerToUpdate.innerHTML = initialResultHTML;
+    };
+
+    generateBtn?.addEventListener('click', async () => {
+        if (!userImgInput.files[0] || !garmentImgInput.files[0]) {
+            alert('Please upload both your photo and a garment photo first!');
+            return;
+        }
+
+        const originalText = generateBtn.innerText;
+        generateBtn.innerText = 'GENERATING...';
+        generateBtn.disabled = true;
+        generateBtn.style.opacity = '0.7';
+
+        const tryonData = new FormData();
+        tryonData.append('person_image', userImgInput.files[0]);
+        tryonData.append('garment_image', garmentImgInput.files[0]);
+        
+        const measData = new FormData();
+        measData.append('person_image', userImgInput.files[0]);
+        measData.append('user_height', heightInput?.value || 170);
+
+        try {
+            const [tryonRes, measRes] = await Promise.all([
+                fetch('http://localhost:8000/tryon', { method: 'POST', body: tryonData }),
+                fetch('http://localhost:8000/measurements', { method: 'POST', body: measData })
+            ]);
+
+            if (tryonRes.ok) {
+                const blob = await tryonRes.blob();
+                const url = URL.createObjectURL(blob);
+                
+                let measurementsHtml = '';
+                if (measRes.ok) {
+                    const meas = await measRes.json();
+                    measurementsHtml = `
+                        <div class="mt-6 bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded-lg p-4 w-full max-w-sm">
+                            <h5 class="text-[#C9A84C] font-bold text-center mb-3 uppercase tracking-widest text-xs">AI Measurements</h5>
+                            <div class="grid grid-cols-2 gap-y-2 text-xs text-on-surface">
+                                <div class="text-on-surface/60">Shoulder:</div>
+                                <div class="font-semibold text-right">${meas.shoulder_width || 'N/A'}</div>
+                                <div class="text-on-surface/60">Chest/Torso:</div>
+                                <div class="font-semibold text-right">${meas.torso_length || 'N/A'}</div>
+                                <div class="text-on-surface/60">Hips:</div>
+                                <div class="font-semibold text-right">${meas.hip_width || 'N/A'}</div>
+                            </div>
+                            <div class="mt-3 pt-3 border-t border-[#C9A84C]/20 flex justify-between items-center">
+                                <span class="text-on-surface/60 text-xs">Recommended Size:</span>
+                                <span class="bg-[#C9A84C] text-white font-bold px-3 py-1 rounded text-sm">${meas.recommended_size || 'M'}</span>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                if (containerToUpdate) {
+                    containerToUpdate.innerHTML = `
+                        <div class="relative w-full h-full flex flex-col items-center justify-center p-4 overflow-y-auto">
+                            <img src="${url}" class="max-w-full max-h-[450px] object-contain rounded-xl shadow-2xl border-4 border-[#C9A84C]/30" />
+                            <p class="mt-4 text-[#C9A84C] font-bold tracking-widest uppercase text-sm">AI Fitting Ready</p>
+                            ${measurementsHtml}
+                            <button onclick="window.resetTryOn()" class="mt-6 border border-secondary text-secondary px-8 py-3 uppercase tracking-[0.2em] font-label-sm hover:bg-secondary hover:text-on-secondary transition-all flex items-center gap-2">
+                                <span class="material-symbols-outlined text-sm">refresh</span> Try Another Outfit
+                            </button>
+                        </div>
+                    `;
+                }
+            } else {
+                alert('AI Fitting failed. Make sure your backend is running!');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Error connecting to backend at http://localhost:8000');
+        } finally {
+            if(generateBtn) {
+                generateBtn.innerText = originalText;
+                generateBtn.disabled = false;
+                generateBtn.style.opacity = '1';
+            }
+        }
+    });
+
+    // --- RECOMMENDER LOGIC ---
+    try {
+        const response = await fetch('http://localhost:8000/recommend', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                community: currentCommunity,
+                preferred_categories: [],
+                price_range: [0, 1000],
+                past_purchases: [],
+                tags: []
+            })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            const recs = data.recommendations || [];
+            
+            if (recs.length > 0) {
+                const recSection = document.getElementById('recommended-section');
+                if(recSection) recSection.style.display = 'block';
+                const grid = document.getElementById('recommendations-grid');
+                if(grid) {
+                    grid.innerHTML = '';
+                    recs.slice(0, 4).forEach(item => {
+                        grid.innerHTML += `
+                            <div class="group cursor-pointer">
+                                <div class="relative bg-surface-container-low aspect-[3/4] mb-4 overflow-hidden border border-outline-variant/30 flex items-center justify-center p-8">
+                                    <span class="material-symbols-outlined text-6xl text-secondary/20" style="font-variation-settings: 'wght' 200;">apparel</span>
+                                    <div class="absolute inset-0 bg-primary-container/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                                        <button class="border border-secondary text-secondary px-6 py-2 uppercase tracking-[0.2em] font-label-sm hover:bg-secondary hover:text-on-secondary transition-all">
+                                            View Details
+                                        </button>
+                                    </div>
+                                    <div class="absolute top-4 right-4 bg-surface-container-highest/80 backdrop-blur-md px-2 py-1 flex items-center gap-1 border border-outline-variant/50">
+                                        <span class="material-symbols-outlined text-[10px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="text-[10px] font-bold">${item.rating}</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-start gap-4">
+                                    <div>
+                                        <h4 class="font-label-lg uppercase tracking-wider text-on-surface mb-1">${item.name}</h4>
+                                        <p class="font-body-md text-xs text-on-surface/40 uppercase tracking-widest">${item.category}</p>
+                                    </div>
+                                    <span class="font-label-lg text-secondary">$${item.price.toFixed(2)}</span>
+                                </div>
+                                <div class="mt-3 text-[10px] text-secondary/80 bg-secondary/5 inline-block px-2 py-1 rounded border border-secondary/10">
+                                    <span class="material-symbols-outlined text-[10px] align-middle mr-1">auto_awesome</span>
+                                    ${item.explanation.split('|')[0]}
+                                </div>
+                            </div>
+                        `;
+                    });
+                }
+            }
+        }
+    } catch (err) {
+        console.error("Failed to load recommendations:", err);
+    }
+});
+</script>
+</body></html>
+
+
+
+
+
+
+
