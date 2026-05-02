@@ -1,0 +1,177 @@
+import json
+import os
+
+notebook = {
+    "cells": [
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "# AuraFit Platform: AI Capabilities Showcase\n",
+                "This notebook demonstrates the core AI functionalities of the AuraFit platform:\n",
+                "1. **Virtual Try-On Engine**\n",
+                "2. **Body Measurement Estimation**\n",
+                "3. **Product Recommendation Engine**"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "import sys\n",
+                "import os\n",
+                "import matplotlib.pyplot as plt\n",
+                "import cv2\n",
+                "\n",
+                "# Ensure the backend directory is in the path so we can import our modules\n",
+                "sys.path.append(os.getcwd())\n",
+                "\n",
+                "from tryon import process_tryon\n",
+                "from classifier import classify_garment\n",
+                "from measurement import estimate_measurements\n",
+                "from recommender import get_recommendations\n",
+                "\n",
+                "def display_img(path, title=\"\"):\n",
+                "    img = cv2.imread(path)\n",
+                "    if img is not None:\n",
+                "        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)\n",
+                "        plt.imshow(img)\n",
+                "        plt.title(title)\n",
+                "        plt.axis('off')\n",
+                "        plt.show()\n",
+                "    else:\n",
+                "        print(f\"Image not found: {path}\")\n"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## Task 1: Virtual Garment Try-On\n",
+                "Here we take a user's reference photo and a garment photo, classify the garment type, and overlay it accurately on the user's body."
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "person_img_path = 'uploads/demo_person.jpg'\n",
+                "garment_img_path = 'uploads/demo_garment.jpg'\n",
+                "output_img_path = 'outputs/demo_tryon_result.jpg'\n",
+                "\n",
+                "print(\"--- INPUTS ---\")\n",
+                "plt.figure(figsize=(8, 4))\n",
+                "plt.subplot(1, 2, 1)\n",
+                "img1 = cv2.cvtColor(cv2.imread(person_img_path), cv2.COLOR_BGR2RGB)\n",
+                "plt.imshow(img1); plt.title('Person (Profile)'); plt.axis('off')\n",
+                "plt.subplot(1, 2, 2)\n",
+                "img2 = cv2.cvtColor(cv2.imread(garment_img_path), cv2.COLOR_BGR2RGB)\n",
+                "plt.imshow(img2); plt.title('Garment'); plt.axis('off')\n",
+                "plt.show()\n",
+                "\n",
+                "print(\"Classifying garment...\")\n",
+                "category_result = classify_garment(garment_img_path)\n",
+                "category = category_result.get('category', 'Top')\n",
+                "print(f\"Detected Category: {category} ({category_result.get('confidence')} confidence)\")\n",
+                "\n",
+                "print(\"\\nRunning Virtual Try-On... (this applies perspective warping & alpha blending)\")\n",
+                "success = process_tryon(person_img_path, garment_img_path, output_img_path, category)\n",
+                "\n",
+                "if success:\n",
+                "    print(\"\\n--- OUTPUT ---\")\n",
+                "    display_img(output_img_path, \"AI Try-On Result\")\n",
+                "else:\n",
+                "    print(\"Try-On Failed.\")"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## Task 2: Body Measurement Estimation\n",
+                "Using Mediapipe Pose Landmarks and the user's height, we estimate their body dimensions to recommend the perfect size."
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "user_height_cm = 170\n",
+                "\n",
+                "print(f\"Estimating measurements for user with height {user_height_cm} cm...\")\n",
+                "measurements = estimate_measurements(person_img_path, user_height_cm)\n",
+                "\n",
+                "import pandas as pd\n",
+                "from IPython.display import display\n",
+                "\n",
+                "df_meas = pd.DataFrame(list(measurements.items()), columns=['Metric', 'Value'])\n",
+                "display(df_meas.style.hide(axis='index'))"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## Task 3: Product Recommendation Engine\n",
+                "A content-based recommender that filters by the user's community storefront, then ranks by category match, tag similarity, rating, and budget."
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "user_profile = {\n",
+                "    \"community\": \"Muslim\",\n",
+                "    \"preferred_categories\": [\"Full Length\", \"Accessory\"],\n",
+                "    \"price_range\": [50, 200],\n",
+                "    \"tags\": [\"abaya\", \"modest\", \"embroidery\", \"premium\"],\n",
+                "    \"past_purchases\": []\n",
+                "}\n",
+                "\n",
+                "print(\"User Profile:\")\n",
+                "display(user_profile)\n",
+                "\n",
+                "print(\"\\nGenerating Recommendations...\")\n",
+                "recs = get_recommendations(user_profile)\n",
+                "\n",
+                "# Format nicely into a DataFrame\n",
+                "df_recs = pd.DataFrame(recs)\n",
+                "display(df_recs[['name', 'category', 'price', 'rating', 'score', 'explanation']])"
+            ]
+        }
+    ],
+    "metadata": {
+        "kernelspec": {
+            "display_name": "Python 3",
+            "language": "python",
+            "name": "python3"
+        },
+        "language_info": {
+            "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+            },
+            "file_extension": ".py",
+            "mimetype": "text/x-python",
+            "name": "python",
+            "nbconvert_exporter": "python",
+            "pygments_lexer": "ipython3",
+            "version": "3.9.0"
+        }
+    },
+    "nbformat": 4,
+    "nbformat_minor": 4
+}
+
+with open("AuraFit_Showcase.ipynb", "w", encoding="utf-8") as f:
+    json.dump(notebook, f, indent=2)
+
+print("Notebook generated successfully.")

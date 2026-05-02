@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+env/
+.env
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Project specific
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/outputs/*
+!backend/outputs/.gitkeep
+backend/*.task
+backend/*.pth
